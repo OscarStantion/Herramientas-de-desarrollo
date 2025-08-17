@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gusanito (Snake)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>Gusanito</h1>
+        <div class="stats">
+          <div>Puntaje: <span id="score">0</span></div>
+          <div>Mejor: <span id="best">0</span></div>
+        </div>
+      </header>
+
+      <section class="board-wrap">
+        <canvas id="game" width="480" height="480" aria-label="Tablero del juego" role="img"></canvas>
+      </section>
+
+      <section class="controls">
+        <div class="buttons-grid" aria-label="Controles táctiles">
+          <button id="btn-up" aria-label="Arriba">▲</button>
+          <div class="spacer"></div>
+          <button id="btn-right" aria-label="Derecha">▶</button>
+          <button id="btn-left" aria-label="Izquierda">◀</button>
+          <div class="spacer"></div>
+          <button id="btn-down" aria-label="Abajo">▼</button>
+        </div>
+        <div class="options" role="group" aria-label="Opciones de juego">
+          <label for="speed">Velocidad:</label>
+          <select id="speed" aria-label="Velocidad del juego">
+            <option value="lento" selected>Lento</option>
+            <option value="normal">Normal</option>
+            <option value="rapido">Rápido</option>
+            <option value="insano">Insano</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button id="btn-pause" aria-label="Pausar/Reanudar">⏯ Pausa</button>
+          <button id="btn-restart" aria-label="Reiniciar juego">🔄 Reiniciar</button>
+        </div>
+        <p class="hint">Usa Flechas o WASD. Pausa: Espacio. Reiniciar: R.</p>
+      </section>
+
+      <footer class="footer">
+        <small>Hecho con ❤️ — sin dependencias</small>
+      </footer>
+    </main>
+
+    <script defer src="main.js"></script>
+  </body>
+</html>
