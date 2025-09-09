@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Pago - FERRELUIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="pago(1).css" />
+  </head>
+  <body>
+    <main>
+      <h2>REGISTRO DE PAGO</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Pago</th>
+            <th>Cliente</th>
+            <th>Modelo</th>
+            <th>Fecha de Registro</th>
+            <th>Tipo de Mantenimiento</th>
+            <th>Subtotal</th>
+            <th>IGV</th>
+            <th>Total a Pagar</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tbody>
+  <tr th:if="${ultimoMantenimiento != null}">
+  <td th:text="${ultimaMaquinaria.id}"></td>
+  <td th:text="${ultimaMaquinaria.nombre}"></td>
+  <td th:text="${ultimaMaquinaria.modelo}"></td>
+  <td th:text="${ultimoMantenimiento.fechaSalida}"></td>
+  <td th:text="${ultimoPago.nombre}"></td>
+   <td th:text="${#numbers.formatDecimal(ultimoPago.precio, 1, 'POINT', 2, 'POINT')}"></td>
+   <td>18%</td>
+   <td th:text="${#numbers.formatDecimal(ultimoPago.precio * 1.18, 1, 'POINT', 2, 'POINT')}"></td>
+</tr>
+
+<tr th:if="${ultimoMantenimiento == null}">
+  <td colspan="5">No hay datos de mantenimiento disponibles.</td>
+</tr>
+        </tbody>
+      </table>
+
+      <section class="form-section">
+        <!-- Se elimina action="pagar" para manejar con JS -->
+        <form id="form-pago">
+          <h2>MÉTODO DE PAGO</h2>
+
+          <label for="metodo-pago">Método de pago</label>
+          <select id="metodo-pago" name="metodo-pago">
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta</option>
+          </select>
+
+          <label for="comprobante">Comprobante de pago</label>
+          <select id="comprobante" name="comprobante">
+            <option value="boleta">Boleta</option>
+            <option value="factura">Factura</option>
+          </select>
+          <br>
+
+          <button type="submit" class="btn-submit">Pagar</button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById("form-pago").addEventListener("submit", function (e) {
+        e.preventDefault(); // Evitar envío tradicional del formulario
+
+        // Crear iframe oculto para forzar la descarga del Excel
+        const iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        iframe.src = "/pagar"; // Llama al endpoint que genera el Excel
+        document.body.appendChild(iframe);
+
+        // Esperar unos segundos y redirigir al Inicio
+        setTimeout(() => {
+          window.location.href = "/Inicio.html";
+        }, 2000); // Redirige en 3 segundos
+      });
+    </script>
+  </body>
+</html>
