@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FERRELUIS - Mantenimientos Pendientes</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+    .btn-completar {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-completar:hover {
+      background-color: #45a049;
+    }
+    
+    .btn-completar:active {
+      background-color: #3e8e41;
+    }
+  </style>
+  </head>
+  <body>
+    <nav>
+    <ul class="izquierdo altura">
+      <li class="logo">
+        <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
+      </li>
+      <li class="tractor">
+        <img src="img/tractor.png" alt="" />
+      </li>
+      <li class="tierra">
+        <img src="img/tierra.png" alt="" />
+      </li>
+    </ul>
+    <ul class="derecho altura">
+      <li><a href="menu-trabjador.html">Inicio</a></li>
+      <li><a href="index.html">Mantenimientos pendientes</a></li>
+      <li><a href="realizados.html">Historial de tareaas</a></li>
+<li>
+      <form th:action="@{/logout}" method="post">
+  <button type="submit" class="cerrar">Cerrar Sesión</button>
+</form>  </li>    </ul>
+  </nav>
+  
+  <div class="fondo-tra">
+   <h1>MANTENIMIENTOS PENDIENTES</h1>
+
+    <!-- Tabla de mantenimientos -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>MÁQUINA</th>
+          <th>MODELO</th>
+          <th>TIPO DE MANTENIMIENTO</th>
+          <th>FECHA LÍMITE</th>
+          <th>ESTADO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="tarea : ${tareas}">
+          <td th:text="${tarea.id}">ID</td>
+          <td th:text="${tarea.maquina}">Máquina</td>
+          <td th:text="${tarea.modelo}">Modelo</td>
+          <td th:text="${tarea.tipoMantenimiento}">Tipo</td>
+          <td th:text="${#temporals.format(tarea.fechaLimite, 'dd/MM/yyyy')}">Fecha</td>
+          <td>
+            <form th:action="@{/completar-tarea}" method="post" style="display: inline;">
+              <input type="hidden" name="idTarea" th:value="${tarea.id}" />
+              <button type="submit" class="btn-completar" 
+                      onclick="return confirm('¿Está seguro de marcar esta tarea como completada?')">
+                ✓ Completar
+              </button>
+            </form>
+          </td>
+        </tr>
+        <!-- Mensaje cuando no hay tareas -->
+        <tr th:if="${#lists.isEmpty(tareas)}">
+          <td colspan="6" style="text-align: center; padding: 20px; color: #666;">
+            No tienes tareas pendientes por el momento
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Botón para actualizar estado -->
+    <div class="boton-actualizar">
+      <button onclick="location.reload()">Actualizar Estado</button>
+    </div>
+
+    <!-- Imagen motivacional -->
+    <div class="imagen">
+      <img src="img/666.jpg" alt="Motivación" />
+    </div>
+  
+  
+  </div>
+  
+    <!-- Título principal -->
+   
+  </body>
+</html>

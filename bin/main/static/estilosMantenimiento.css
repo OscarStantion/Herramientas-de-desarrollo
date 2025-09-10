@@ -1,0 +1,265 @@
+
+@charset "UTF-8";
+.cerrar {
+    background: none;
+    border: 2px solid transparent;
+    color: #fff;
+    padding: 8px;
+    font-size: 15px;
+    
+}
+
+.cerrar:hover {
+    border: 2px solid bisque;
+    border-radius: 8px;
+    color: #fff;
+}
+
+
+/*CABECERA*/
+.menu {
+    background-color: #6AA84F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu div {
+    font-weight: bold;
+    color: black; /* Asegura que el texto "FERRELUIS" también sea negro */
+    font-size: 25px;
+    margin-left: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Aumenta el espacio entre pestañas */
+}
+
+li a {
+    text-decoration: none;
+    color: black; /* Color de las letras del menú */
+    font-weight: bold;
+}
+
+/*CUADROS DE MANTENIMIENTO*/
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.subtitulo {
+    color: #6AA84F;
+    font-size: 25px;
+    margin-bottom: 10px;
+ 
+}
+.postSub{
+    font-size: 18px;
+}
+
+.duracion {
+    font-size: 16px;
+    color: #6AA84F;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.precio {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #6AA84F;
+    text-align: right;
+    margin-right: 50%;
+}
+P{
+    width: 320px;
+    font-size: 18px;
+    
+}
+
+/*Para el botón ON/OFF switch*/
+.switch-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 170px;
+   
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6AA84F;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.switch-label {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/*Orden de los cuadros (flexbox)*/
+.mantenimientos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    gap: 40px;
+}
+
+.fila-superior {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+}
+
+.fila-inferior {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.mantenimiento-box {
+    border: 2px solid black;
+    width: 388px; 
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: justify;
+    height: 230px;
+}
+
+/*Botón siguiente*/
+.boton-central {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.boton-central button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #6AA84F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-central button:hover {
+    background-color: #558B3F;
+}
+
+ /* ////////////// MODAL /////////////*/
+ /* Fondo oscuro */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Botón de cerrar (X) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Línea de fecha */
+.fecha-linea {
+    margin: 15px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón aceptar */
+.boton-modal {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.boton-modal button {
+    background-color: #6AA84F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-modal button:hover {
+    background-color: #558B3F;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="Historial-pago.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="izquierdo altura">
+            <li class="logo">
+                <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
+            </li>
+            <li class="tractor">
+                <img src="img/tractor.png" alt="" />
+            </li>
+            <li class="tierra">
+                <img src="img/tierra.png" alt="" />
+            </li>
+        </ul>
+        <ul class="derecho altura">
+            <li><a href="Inicio.html">Inicio</a></li>
+            <li><a href="registro_maquinaria.html">Registrar servicio</a></li>
+            <li><a href="gestionar_tecnico.html">Gestionar técnico</a></li>
+            <li><a href="Historial-pago.html">Historial de pago</a></li>
+<li>
+      <form th:action="@{/logout}" method="post">
+  <button type="submit" class="cerrar">Cerrar Sesión</button>
+</form>  </li>        </ul>
+    </nav>
+    <div class="contenido-pago">
+        <h1>HISTORIAL DE PAGOS</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Pago</th>
+                    <th>Cliente</th>
+                    <th>Maquinaria ID</th>
+                    <th>Fecha de Registro</th>
+                    <th>Tipo de Mantenimiento</th>
+                    <th>Subtotal</th>
+                    <th>IGV</th>
+                    <th>Total a Pagar</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+   <tr th:each="pago : ${historialPagos}">
+    <td th:text="${pago.id}"></td>
+    <td th:text="${pago.nombre}"></td>
+    <td th:text="${pago.modelo}"></td>
+    <td th:text="${pago.fechaSalida}"></td>
+    <td th:text="${pago.tipo}"></td>
+    <td th:text="${#numbers.formatDecimal(pago.subtotal, 1, 'POINT', 2, 'POINT')}"></td>
+    <td>18%</td>
+    <td th:text="${#numbers.formatDecimal(pago.total, 1, 'POINT', 2, 'POINT')}"></td>
+  </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

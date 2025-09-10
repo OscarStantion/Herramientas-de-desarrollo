@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FERRELUIS - Mantenimientos Realizados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <ul class="izquierdo altura">
+      <li class="logo">
+        <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
+      </li>
+      <li class="tractor">
+        <img src="img/tractor.png" alt="" />
+      </li>
+      <li class="tierra">
+        <img src="img/tierra.png" alt="" />
+      </li>
+    </ul>
+    <ul class="derecho altura">
+      <li><a href="menu-trabjador.html">Inicio</a></li>
+      <li><a href="index.html">Mantenimientos pendientes</a></li>
+      <li><a href="realizados.html">Historial de tareaas</a></li>
+<li>
+      <form th:action="@{/logout}" method="post">
+  <button type="submit" class="cerrar">Cerrar Sesión</button>
+</form>  </li>    </ul>
+  </nav>
+  <div class="fondo-tra">
+
+      <div class="unico">
+      <h1>MANTENIMIENTOS REALIZADOS</h1>
+
+      <!-- Tabla de mantenimientos -->
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>MÁQUINA</th>
+            <th>MODELO</th>
+            <th>TIPO DE MANTENIMIENTO</th>
+            <th>FECHA REALIZADA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="tarea : ${tareas}">
+            <td th:text="${tarea.id}">ID</td>
+            <td th:text="${tarea.maquina}">Máquina</td>
+            <td th:text="${tarea.modelo}">Modelo</td>
+            <td th:text="${tarea.tipoMantenimiento}">Tipo</td>
+            <td th:text="${#temporals.format(tarea.fechaRealizada, 'dd/MM/yyyy')}">Fecha</td>
+          </tr>
+          <!-- Mensaje cuando no hay tareas -->
+          <tr th:if="${#lists.isEmpty(tareas)}">
+            <td colspan="5" style="text-align: center; padding: 20px; color: #666;">
+              No has completado ninguna tarea aún
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Imagen motivacional -->
+      <div class="imagen">
+        <img src="img/bien.jpg" alt="Motivación" />
+      </div>
+      </div>
+    <!-- Título principal -->
+
+
+
+
+  </div>
+
+</body>
+
+</html>

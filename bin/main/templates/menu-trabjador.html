@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo-menu-tra.css" />
+  </head>
+
+  <body>
+  <nav>
+    <ul class="izquierdo altura">
+      <li class="logo">
+        <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
+      </li>
+      <li class="tractor">
+        <img src="img/tractor.png" alt="" />
+      </li>
+      <li class="tierra">
+        <img src="img/tierra.png" alt="" />
+      </li>
+    </ul>
+    <ul class="derecho altura">
+      <li><a href="menu-trabjador.html">Inicio</a></li>
+      <li><a href="index.html">Mantenimientos pendientes</a></li>
+      <li><a href="realizados.html">Historial de tareaas</a></li>
+<li>
+      <form th:action="@{/logout}" method="post">
+  <button type="submit" class="cerrar">Cerrar Sesión</button>
+</form>  </li>    </ul>
+  </nav>
+      <div class="fondo-tra">
+      <div class="conte-parra">
+        <form action="/Empezar-trabajador" method="get">
+        <h1>Bienvenido al Sistema de Mantenimiento de Maquinaria Pesada</h1>
+        <hr>
+        <p class="parrafo-presentacion">
+          Esta plataforma ha sido diseñada exclusivamente para el personal técnico y operativo.
+          Aquí podrás registrar mantenimientos, consultar el historial de equipos y gestionar tareas diarias de forma
+          rápida, segura y eficiente.
+          Tu trabajo es clave para el buen funcionamiento de nuestras operaciones. ¡Gracias por tu compromiso!     
+        </p>
+        <input type="submit" value="Empezar">
+        </form>
+      </div>
+    </div>
+  
+  </body>
+</html>
