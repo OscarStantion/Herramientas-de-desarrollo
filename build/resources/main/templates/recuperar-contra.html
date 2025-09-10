@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="estilos-recuperar-contra.css" />
+    <script
+      src="https://kit.fontawesome.com/da157044bb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="contenedor-recuperar">
+      <div class="recuperar">
+        <h1>Recuperar contraseña</h1>
+        <p>Introduce tu nueva contraseña y repítela.</p>
+        <hr />
+        <form id="form-recuperar" th:action="@{/actualizar-contraseña}" method="post">
+          <div class="contra">
+            <label class="espacio">Nueva contraseña: <span th:if="${errorContra}" th:text="${errorContra}" style="color:red; margin-left: 5px"></span></label>
+            <input
+              type="password"
+              placeholder="Ingresa tu nueva contraseña"
+              name="contra1"
+              required 
+            />
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="contra">
+            <label class="espacio">Repite la contraseña: <span th:if="${errorContra}" th:text="${errorContra}" style="color:red; margin-left: 5px"></span></label>
+            <input
+              type="password"
+              placeholder="Repite tu nueva contraseña"
+              required
+              name="contra2"
+            />
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="boton">
+            <input type="submit" value="Cambiar" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

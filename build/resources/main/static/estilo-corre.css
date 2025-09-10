@@ -1,0 +1,88 @@
+.cerrar {
+    background: none;
+    border: 2px solid transparent;
+    color: #fff;
+    padding: 8px;
+    font-size: 15px;
+    
+}
+
+.cerrar:hover {
+    border: 2px solid bisque;
+    border-radius: 8px;
+    color: #fff;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+}
+.hero-correo{
+    box-shadow: 0px 0px 8px rgb(145, 142, 142);
+    width: 500px;
+}
+
+.titulo{
+    background-color: rgb(188, 188, 234);
+    padding: 15px 20px;
+}
+.parra1{
+    font-size: 17px;
+    color: rgb(157, 98, 157);
+}
+.parra2{
+    color: rgb(104, 102, 102);
+}
+form{
+    padding: 20px 20px;
+}
+.correo-dato{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+}
+.correo-dato label{
+    margin-bottom: 8px;
+}
+.correo-dato input{
+    height: 40px;
+    border-radius: 8px;
+    padding-left: 30px;
+    border: 1px solid #a09f9f;
+    transition-duration:box-shadow, border;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+}
+.correo-dato input:focus{
+    box-shadow: 0 0 0 4px #8ff0b9;
+    border: 1px solid rgb(7, 154, 7);
+    outline: none;
+}
+.correo-dato i{
+    position: absolute;
+    pointer-events: none;
+    color: gray;
+    top: 39px;
+    left: 8px;
+}
+.boton{
+    display: flex;
+    justify-content: space-between;
+}
+.boton input{
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 8px;
+    border: 1px solid #a09f9f;
+}
+.boton input:hover{
+    background-color: #808b96;
+    color: #fff;
+    border: 1px solid #808b96;
+}
