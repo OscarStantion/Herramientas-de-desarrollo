@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestionar Técnico</title>
+	<link rel="stylesheet" href="gestionar_tecnico.css" />
+</head>
+
+<body>
+    <nav>
+        <ul class="izquierdo altura">
+            <li class="logo">
+                <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
+            </li>
+            <li class="tractor">
+                <img src="img/tractor.png" alt="" />
+            </li>
+            <li class="tierra">
+                <img src="img/tierra.png" alt="" />
+            </li>
+        </ul>
+        <ul class="derecho altura">
+            <li><a href="Inicio.html">Inicio</a></li>
+            <li><a href="registro_maquinaria.html">Registrar servicio</a></li>
+            <li><a href="gestionar_tecnico.html">Gestionar técnico</a></li>
+            <li><a href="Historial-pago.html">Historial de pago</a></li>
+            <li>
+      <form th:action="@{/logout}" method="post">
+  <button type="submit" class="cerrar">Cerrar Sesión</button>
+</form>  </li>
+        </ul>
+    </nav>
+    <div class="contenedor-padre">
+        <h1>GESTIONAR TÉCNICO</h1>
+
+        <div class="form-container">
+            <form id="form-tecnico" th:action="${modoEdicion}?'actualizar-tecnico-final':'/agregar-tecnico'" method="post">
+                <div class="form-group">
+                    <!-- <label>ID <input name="id" type="text" required /></label> -->
+                     <input type="hidden" th:if="${modoEdicion}" name="id" th:value="${actualizarTecnico.id}" />
+                    <label>Nombre: <input name="nombre" type="text" required placeholder="Ingrese el nombre" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.nombre}:''" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios permitidos"></label>
+                    <label>Apellido: <input name="apellido" type="text" required placeholder="Ingrese el apellido" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.apellido}:''" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios permitidos"></label>
+                    <label>Usuario: <span style="color: red;" th:if="${errorUsuario}" th:text="${errorUsuario}"></span><input name="usuario" type="text" required placeholder="Ingrese el usuario" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.usuario}:''"></label>
+                    <label>Contraseña: <input name="contraseña" type="text" required placeholder="Ingrese la contraseña" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.contraseña}:''"></label>
+                    <label>Especialidad: <input name="especialidad" type="text" required placeholder="Ingrese la especialidad" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.especialidad}:''"></label>
+                    <label>Teléfono: <input name="telefono" type="text" required placeholder="Ingrese el teléfono" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.telefono}:''" pattern="^9\d{8}$"  title="Debe ingresar exactamente 9 dígitos"></label>
+                    <label>Email: <input name="email" type="email" required placeholder="Ingrese el email" th:value="${actualizarTecnico != null} ? ${actualizarTecnico.email}:''"></label>
+                    <div class="botones">
+                    	<button type="submit" style="cursor: pointer;" th:text="${modoEdicion} ? 'ACTUALIZAR' : 'AGREGAR' "></button>
+               		</div>
+                </div>
+                
+            </form>
+        </div>
+        <table id="tabla-tecnicos" th:if="${modoEdicion == false}"> <!-- Muestra la tabla si esta vacio actualizarTecnico -->
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Usuario</th>
+                    <th>Especialidad</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Eliminar</th>
+                    <th>Actualizar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="tecnico : ${tecnicos}">
+                    <td th:text="${tecnico.nombre}"></td>
+                    <td th:text="${tecnico.apellido}"></td>
+                    <td th:text="${tecnico.usuario}"></td>
+                    <td th:text="${tecnico.especialidad}"></td>
+                    <td th:text="${tecnico.telefono}"></td>
+                    <td th:text="${tecnico.email}"></td>
+                    <td><form  th:action="@{/eliminar-tecnico}" method="post">
+                    	<input type="hidden" name="id-tecnico" th:value="${tecnico.id}"/>
+                    	<input class="btn-eliminar" type="submit" value="Eliminar"/>
+                    </form></td>
+                    <td><form  th:action="@{/actualizar-tecnico}" method="post">
+                    	<input type="hidden" name="id-tecnico" th:value="${tecnico.id}"/>
+                    	<input class="btn-actualizar" type="submit" value="Actualizar"/>
+                    </form></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

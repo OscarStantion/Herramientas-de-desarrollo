@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo-corre.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/da157044bb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-correo">
+        <div class="titulo">
+          <p class="parra1">Recuperar Password.</p>
+          <p class="parra2">
+            Ten presente que tu correo debe haber sido registrado en neustra
+            base de datos.
+          </p>
+        </div>
+        <form th:action="@{/nueva-contraseña}" method="post">
+          <div class="correo-dato">
+            <label for="">Correo Electronico:<span th:if="${errorGmail}" th:text="${errorGmail}" style="color:red; margin-left: 5px"></span></label>
+            
+            <input type="text" name="email" id="" placeholder="ejemplo@gmail.com" />
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="boton">
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

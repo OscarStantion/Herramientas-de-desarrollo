@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <link rel="stylesheet" href="estilosMantenimiento.css" type="text/css">
+</head>
+<body>
+
+<h1>SELECCIONE EL TIPO DE MANTENIMIENTO</h1>
+<form id="form-mantenimiento" th:action="@{/procesar-mantenimiento}" method="post">
+  <div class="mantenimientos-container">
+    <div class="fila-superior">
+    
+      <div th:each="plan : ${planes}">
+        <h4 class="subtitulo" th:text="${plan.nombre}">Nombre del plan</h4>
+  <div class="mantenimiento-box">
+    <div class="postSub">
+      Descripción del plan de mantenimiento:
+      <span class="duracion">(1 día)</span>
+    </div>
+    <p th:text="${plan.descripcion}">Texto de la descripción</p>
+    <div class="precio" th:text="${plan.precio + '$'}">Precio</div>
+  </div>
+
+  <!-- Switch -->
+  <div class="switch-container">
+    <label class="switch">
+      <input type="checkbox" name="tiposSeleccionados"
+             th:value="${plan.id}">
+      <span class="slider"></span>
+    </label>
+    <span class="switch-label"></span>
+  </div>
+</div>
+      </div>
+
+    </div>
+
+    <!-- Botón para abrir el modal -->
+    <div class="boton-central">
+      <button type="button" id="btn-siguiente" disabled>SIGUIENTE</button>
+    </div>
+  </div>
+
+  <!-- Modal (debe estar DENTRO del formulario para que se envíen los datos) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>SELECCIONE LA FECHA DEL MANTENIMIENTO</h2>
+
+      <div class="fecha-linea">
+        <label>Fecha Actual:</label>
+        <span id="fecha-actual"></span>
+      </div>
+
+      <div class="fecha-linea">
+        <label for="fecha-salida">Fecha de Salida:</label>
+        <input type="date" id="fecha-salida" name="fechaSalida" required>
+      </div>
+
+      <div class="boton-modal">
+        <button type="submit" class="cerrar-modal" disabled>Aceptar</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<!-- Scripts -->
+<script>
+  // Referencias
+  const switches = document.querySelectorAll('input[type="checkbox"][name="tiposSeleccionados"]');
+  const btnSiguiente = document.getElementById("btn-siguiente");
+  const fechaInput = document.getElementById("fecha-salida");
+  const aceptarBtn = document.querySelector(".cerrar-modal");
+  const modal = document.getElementById("modal");
+  const spanClose = document.querySelector(".close");
+
+  // Habilitar botón siguiente si hay al menos un switch seleccionado
+  switches.forEach(sw => sw.addEventListener("change", () => {
+    const algunoActivo = Array.from(switches).some(s => s.checked);
+    btnSiguiente.disabled = !algunoActivo;
+  }));
+
+  // Abrir modal
+  btnSiguiente.addEventListener("click", () => {
+    modal.style.display = "block";
+
+    // Mostrar fecha actual
+    const hoy = new Date();
+    const formato = hoy.toLocaleDateString("es-ES", {
+      day: '2-digit', month: '2-digit', year: 'numeric'
+    });
+    document.getElementById("fecha-actual").textContent = formato;
+  });
+
+  // Cerrar modal
+  spanClose.addEventListener("click", () => modal.style.display = "none");
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+
+  // Habilitar botón aceptar solo si se elige fecha
+  fechaInput.addEventListener("input", () => {
+    aceptarBtn.disabled = !fechaInput.value;
+  });
+</script>
+
+</body>
+</html>
