@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Técnicos</title>
+  <link rel="stylesheet" href="estilosTecnicos.css" type="text/css" />
+</head>
+<body>
+  <h1>SELECCIONE EL TÉCNICO</h1>
+
+  <div class="tabla-container">
+    <table class="tabla-tecnicos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Especialidad</th>
+          <th>Teléfono</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+  <tr th:each="tecnico : ${tecnicos}">
+    <td th:text="${tecnico.id}"></td>
+    <td th:text="${tecnico.nombre}">Nombre</td>
+    <td th:text="${tecnico.apellido}">Apellido</td>
+    <td th:text="${tecnico.especialidad}">Especialidad</td>
+    <td th:text="${tecnico.telefono}">Teléfono</td>
+    <td th:text="${tecnico.email}">Email</td>
+  </tr>
+</tbody>
+    </table>
+  </div>
+
+  <!-- Formulario oculto -->
+<form id="form-seleccion" th:action="@{/tecnico-seleccionado}" method="post">
+  <input type="hidden" name="id" />
+</form>
+
+
+  <!-- Botón enviar -->
+  <div class="boton-central">
+    <button id="btnEnviar">ENVIAR</button>
+  </div>
+
+  <!-- Modal de confirmación (ya no necesario si el envío es al backend) -->
+  <div id="modalExito" class="modal" style="display: none;">
+    <div class="modal-contenido">
+      <form action="registro-exitoso" method="get">
+        <h2>¡REGISTRO DE SERVICIO EXITOSO!</h2>
+        <button id="btnAceptar" type="submit">ACEPTAR</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const filas = document.querySelectorAll(".tabla-tecnicos tbody tr");
+    const botonEnviar = document.getElementById("btnEnviar");
+    const formSeleccion = document.getElementById("form-seleccion");
+
+    let filaSeleccionada = null;
+
+    // Marcar fila seleccionada
+    filas.forEach(fila => {
+      fila.addEventListener("click", function () {
+        filas.forEach(f => f.classList.remove("fila-seleccionada"));
+        this.classList.add("fila-seleccionada");
+        filaSeleccionada = this;
+      });
+    });
+
+    // Enviar datos al backend al hacer clic en ENVIAR
+    botonEnviar.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevenir envío por defecto
+
+      if (!filaSeleccionada) {
+        alert("Por favor, seleccione un técnico antes de enviar.");
+        return;
+      }
+
+      const celdas = filaSeleccionada.querySelectorAll("td");
+      const campos = ["id", "nombre", "apellido", "especialidad", "telefono", "email"];
+
+      campos.forEach((campo, i) => {
+      formSeleccion.querySelector("[name=id]").value = celdas[0].textContent;
+      });
+
+      formSeleccion.submit(); // Enviar al backend
+    });
+  </script>
+</body>
+</html>
