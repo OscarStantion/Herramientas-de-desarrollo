@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class UsuariosRoles {
-// Identificador único de la relación usuario-rol (clave primaria)
+// Identificador único de la relación usuario-rol (clave primaria) 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
