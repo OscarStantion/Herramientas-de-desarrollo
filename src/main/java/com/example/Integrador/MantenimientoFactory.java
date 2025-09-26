@@ -1,7 +1,7 @@
 package com.example.Integrador;
 import java.util.ArrayList;
 import java.util.List;
-
+// Clase base para los mantenimientos
 public class MantenimientoFactory {
 
     public static Mantenimiento crearMantenimiento(String tipo) {
