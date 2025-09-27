@@ -19,7 +19,7 @@ import com.example.Integrador.Repositorios.PlanMantenimientoRepository;
 import com.example.Integrador.Repositorios.RelacionMantenimientoRepository;
 import com.example.Integrador.Repositorios.TecnicoRepository;
 
-
+// Servicio para gestionar las operaciones relacionadas con los técnicos
 @Service
 public class TecnicoService {
 

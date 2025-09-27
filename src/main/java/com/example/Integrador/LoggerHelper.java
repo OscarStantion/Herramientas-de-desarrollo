@@ -3,7 +3,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class LoggerHelper {
     private static final Logger logger = LoggerFactory.getLogger(LoggerHelper.class);
-
+// Métodos de utilidad para logging
     public static void logInfo(String mensaje) {
         logger.info(mensaje);
     }

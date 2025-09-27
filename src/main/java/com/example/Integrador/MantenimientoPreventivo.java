@@ -6,6 +6,7 @@ public class MantenimientoPreventivo implements Mantenimiento {
         return "Revisión y reparación de sistemas eléctricos, hidráulicos, motor, transmisión, chasis y cambio de carrilería.";
     }
 
+    // Costo fijo del mantenimiento preventivo
     @Override
     public double getCosto() {
         return 200.0;
