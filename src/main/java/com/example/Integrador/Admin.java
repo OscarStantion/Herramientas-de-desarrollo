@@ -1,5 +1,5 @@
 package com.example.Integrador;
-
+// Clase que representa a un administrador del sistema
 public class Admin implements UsuarioConCredenciales {
     private String usuario;
     private String contraseña;
