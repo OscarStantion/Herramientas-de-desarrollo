@@ -1,5 +1,5 @@
 package com.example.Integrador;
-
+// Clase que implementa el mantenimiento predictivo, basado en la predicción de fallos mediante análisis de datos.
 public class MantenimientoPredictivo implements Mantenimiento {
     @Override
     public String getDescripcion() {
