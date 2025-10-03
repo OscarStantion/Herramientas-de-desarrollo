@@ -11,7 +11,7 @@ import com.example.Integrador.Entidades.UsuariosRoles;
 import com.example.Integrador.Repositorios.TecnicoRepository;
 import com.example.Integrador.Repositorios.UsuarioRolesRepository;
 import com.example.Integrador.Seguridad.RolesRepository;
-
+// Servicio para autenticación de usuarios
 @Service
 public class AutenticacionService {
 
