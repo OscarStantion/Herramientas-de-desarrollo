@@ -23,7 +23,7 @@ public class MyUserDetailsService implements UserDetailsService {
 	private RolesRepository rolesRepository;
 	@Autowired
 	private UsuarioRolesRepository urRepository;
-	
+	//carga de usuario y roles desde la base de datos
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Tecnico usuario = usuariosRepository.findByUsuario(username)
