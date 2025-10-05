@@ -6,30 +6,33 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+// Entidad técnico del sistema
 @Entity
 public class Tecnico implements UsuarioConCredenciales{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id; // ID único
 	
-    private String nombre;
-    private String apellido;
-    private String usuario;
-    private String contraseña;
-    private String especialidad;
-    private String telefono;
-    private String email;
+    private String nombre; // Nombre del técnico
+    private String apellido; // Apellido del técnico
+    private String usuario; // Usuario para login
+    private String contraseña; // Contraseña de acceso
+    private String especialidad; // Área de especialización
+    private String telefono; // Número de contacto
+    private String email; // Correo electrónico // Correo electrónico
 
-    // Constructor
+    // Constructor vacío
     public Tecnico() {
     	
     }
+    // Constructor para login
     public Tecnico(String usuario, String contraseña) {
     	this.usuario=usuario;
     	this.contraseña=contraseña;
     }
     
+	// Constructor completo
 	public Tecnico(String nombre, String apellido, String usuario, String contraseña, String especialidad,
 			String telefono, String email) {
 		this.nombre = nombre;
@@ -89,6 +92,7 @@ public class Tecnico implements UsuarioConCredenciales{
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	// Redirecciona al menú técnico
 	@Override
     public String redirigir() {
 		 return "menu-trabjador";
