@@ -15,7 +15,7 @@ import com.example.Integrador.Entidades.Tecnico;
 import com.example.Integrador.Entidades.UsuariosRoles;
 import com.example.Integrador.Repositorios.TecnicoRepository;
 import com.example.Integrador.Repositorios.UsuarioRolesRepository;
-
+// Codigo de seguridad
 public class MyUserDetailsService implements UserDetailsService {
 	@Autowired
 	private TecnicoRepository usuariosRepository;
