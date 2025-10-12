@@ -1,3 +1,4 @@
+/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -7,12 +8,14 @@
     
 }
 
+/* Efecto hover botón cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
+/* Estilos generales del body */
 body {
     background-color: #1e1e1e;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,6 +25,7 @@ body {
     margin: 0;
 }
 
+/* Contenedor principal */
 .contenedor {
     max-width: 600px;
     margin: auto;
@@ -33,6 +37,7 @@ body {
     box-shadow: 0 0 20px rgba(242, 194, 0, 0.3);
 }
 
+/* Título principal */
 h1 {
    /* color: #f2c200;*/
     color: #6AA84F;
@@ -40,16 +45,19 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* Texto párrafo */
 p {
     font-size: 1.2rem;
     margin-bottom: 25px;
 }
 
+/* Imagen de acceso denegado */
 .imagen {
     width: 150px;
     margin-bottom: 20px;
 }
 
+/* Botón principal */
 .boton {
     display: inline-block;
     padding: 10px 20px;
@@ -62,6 +70,7 @@ p {
     transition: background-color 0.3s ease;
 }
 
+/* Efecto hover del botón */
 .boton:hover {
     background-color: white;
 }
