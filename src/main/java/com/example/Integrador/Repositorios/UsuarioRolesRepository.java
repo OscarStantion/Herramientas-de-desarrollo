@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.Integrador.Entidades.UsuariosRoles;
-
+// acceso a datos de la tabla usuarios_roles
 public interface UsuarioRolesRepository extends JpaRepository<UsuariosRoles, Integer> {
 
 	public List<UsuariosRoles> findByIdUsuario(int idUsuario);
