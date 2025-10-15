@@ -1,3 +1,4 @@
+/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -7,17 +8,21 @@
     
 }
 
+/* Hover botón cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
+/* Reset estilos */
 *{
     margin: 0px;
     padding: 0px;
     
 }
+
+/* Barra de navegación */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +30,7 @@ nav {
     height: auto;
 }
 
+/* Sección izquierda nav */
 .izquierdo{
     flex: 1 1 auto;
     display: flex;
@@ -34,6 +40,8 @@ nav {
     background-color: #4b8361;
     padding: 10px 0; 
 }
+
+/* Sección derecha nav */
 .derecho{
     flex: 1 1 auto;
     display: flex;
@@ -43,14 +51,18 @@ nav {
     background-color: rgb(48, 47, 47);
     padding: 10px 0; 
 }
+
+/* Altura fija */
 .altura{
     height: 80px;
 }
 
+/* Lista sin estilos */
 li{
     list-style: none;
 }
 
+/* Enlaces de navegación */
 li a {
     text-decoration: none;
     color: #fff;
@@ -59,13 +71,14 @@ li a {
     font-size: 17px;
 }
 
+/* Hover enlaces */
 li a:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-/* Estilo especial para el logo */
+/* Logo animado */
 .logo {
     animation-name: logo;
     animation-duration: 2s;
@@ -74,6 +87,7 @@ li a:hover {
     animation-direction: alternate;
 }
 
+/* Texto del logo */
 .logo a {
     font-size: 30px;
     font-weight: bold;
@@ -83,21 +97,24 @@ li a:hover {
     font-family: 'Courier New', monospace;
 }
 
-/* Animación de escalado */
-
+/* Engranaje giratorio */
 .gear {
     display: inline-block;
     animation: spin 2s linear infinite;
 }
 
+/* Tornillo giratorio */
 .screw {
     display: inline-block;
     animation: spin-reverse 2s linear infinite;
 }
 
+/* Contenedor tractor */
 .tractor{
     width: 330px;
 }
+
+/* Imagen tractor animada */
 .tractor img{
     width: 110px;
     height: auto;
@@ -108,7 +125,7 @@ li a:hover {
     animation-direction: normal
 }
 
-
+/* Tierra animada */
 .tierra{
     width: 110px;
     animation-name: tierra-grande;
@@ -118,11 +135,14 @@ li a:hover {
     animation-direction: normal;
     margin-right: 25px;
 }
+
+/* Imagen tierra */
 .tierra img{
     width: 100px;
     height: auto;
 }
 
+/* Animación giro horario */
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
@@ -132,6 +152,7 @@ li a:hover {
         ;}
 }
 
+/* Animación giro antihorario */
 @keyframes spin-reverse {
     0% { 
         transform: rotate(0deg);
@@ -141,6 +162,7 @@ li a:hover {
     }
 }
 
+/* Animación escalar logo */
 @keyframes logo {
     0% {
         transform: scale(1);
@@ -149,6 +171,8 @@ li a:hover {
         transform: scale(1.2);
     }
 }
+
+/* Animación movimiento tractor */
 @keyframes tractor-mov{
     0%{
         transform: translateX(0px);
@@ -157,6 +181,8 @@ li a:hover {
         transform: translateX(220px);
     }
 }
+
+/* Animación crecimiento tierra */
 @keyframes tierra-grande{
     0%{
         transform: scale(1);
@@ -166,6 +192,7 @@ li a:hover {
     }
 }
 
+/* Responsive móvil */
 @media (max-width: 768px) {
     .tractor,
     .tierra {
@@ -199,10 +226,9 @@ li a:hover {
     }
 }
 
-/*contenido inicio trabajador*/
+/* Contenido inicio */
 
-
-
+/* Fondo principal */
 .fondo-tra {
     position: relative;
     background-image: url('img/maquinaria2.jpg');
@@ -217,6 +243,7 @@ li a:hover {
     
 }
 
+/* Overlay oscuro sobre fondo */
 .fondo-tra::before {
     content: "";
     position: absolute;
@@ -224,11 +251,11 @@ li a:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para más o menos oscuridad */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
-/* Asegúrate que el contenido esté encima del overlay */
+/* Contenedor de párrafo */
 .conte-parra {
     position: relative;
     z-index: 3;
@@ -237,11 +264,14 @@ li a:hover {
     color: #fff;
 }
 
+/* Título principal */
 .conte-parra h1{
     font-size: 40px;
     color: #fff;
     font-family: serif;
 }
+
+/* Botón principal */
 .conte-parra input{ 
     margin-top: 10px;
     width: 130px;
@@ -250,6 +280,7 @@ li a:hover {
     border: 2px solid black;
 }
 
+/* Hover botón principal */
 .conte-parra input:hover{
     background-color: #848b8c;
     box-shadow: 0px 0px 7px rgb(23, 22, 22);
