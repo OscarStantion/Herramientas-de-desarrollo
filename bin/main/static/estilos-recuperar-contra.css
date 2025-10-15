@@ -1,14 +1,18 @@
+/* Reset estilos */
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
+/* Contenedor principal recuperar */
 .contenedor-recuperar{
     display: flex;
     justify-content: center;   
     margin: 100px 0px;
 }
 
+/* Caja recuperar contraseña */
 .recuperar{
     padding: 30px;
     width:500px;
@@ -17,32 +21,46 @@
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
+
+/* Efecto hover caja */
 .recuperar:hover{
     transform: scale(1.1);
 }
+
+/* Título principal */
 h1{
    font-family: monospace; 
    font-size: 22px;
    text-align: center;
 }
+
+/* Margen título y párrafo */
 h1, p{
     margin-bottom: 10px;
 }
+
+/* Estilo párrafo */
 p{
     opacity: 0.5;
     font-size: 16px;
 }
+
+/* Campo contraseña */
 .contra{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     position: relative;
 }
+
+/* Input contraseña */
 .contra input{
     padding:0px 7px;
     height: 40px;
     padding-left: 30px;
 }
+
+/* Icono contraseña */
 .contra i{
     position:absolute;
     color: gray;
@@ -50,23 +68,30 @@ p{
     top: 39px;
     left: 8px;
 }
+
+/* Estilos generales input */
 input{
     border-radius: 8px;
     border: 1px solid #ced4da;
 }
 
+/* Espaciado */
 .espacio{
     margin-bottom: 8px;
 }
 
+/* Contenedor botón */
 .boton{
     margin: 20px 0px;
 }
+
+/* Estilos botón */
 .boton input{
     width: 100%;
     height: 40px;
 }
 
+/* Hover botón */
 .boton input:hover{
     background-color: #808b96;
     color: #fff;
