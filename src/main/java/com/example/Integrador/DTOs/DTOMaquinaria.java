@@ -1,5 +1,5 @@
 package com.example.Integrador.DTOs;
-
+// DTO para transferencia de datos de maquinaria
 public class DTOMaquinaria {
 	private String nombre;
 	 private String apellido;	    
