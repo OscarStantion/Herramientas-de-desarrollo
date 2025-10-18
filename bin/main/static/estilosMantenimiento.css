@@ -1,5 +1,7 @@
 
 @charset "UTF-8";
+
+/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -9,14 +11,14 @@
     
 }
 
+/* Hover botón cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-
-/*CABECERA*/
+/* Cabecera del menú */
 .menu {
     background-color: #6AA84F;
     display: flex;
@@ -25,44 +27,50 @@
     padding: 10px 20px;
 }
 
+/* Título del menú */
 .menu div {
     font-weight: bold;
-    color: black; /* Asegura que el texto "FERRELUIS" también sea negro */
+    color: black;
     font-size: 25px;
     margin-left: 8px;
 }
 
+/* Lista de navegación */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px; /* Aumenta el espacio entre pestañas */
+    gap: 30px;
 }
 
+/* Enlaces del menú */
 li a {
     text-decoration: none;
-    color: black; /* Color de las letras del menú */
+    color: black;
     font-weight: bold;
 }
 
-/*CUADROS DE MANTENIMIENTO*/
-
+/* Título principal */
 h1{
     text-align: center;
     font-size: 40px;
 }
 
+/* Subtítulo mantenimiento */
 .subtitulo {
     color: #6AA84F;
     font-size: 25px;
     margin-bottom: 10px;
  
 }
+
+/* Texto post-subtítulo */
 .postSub{
     font-size: 18px;
 }
 
+/* Duración del servicio */
 .duracion {
     font-size: 16px;
     color: #6AA84F;
@@ -70,6 +78,7 @@ h1{
     font-weight: bold;
 }
 
+/* Precio del servicio */
 .precio {
     margin-top: 15px;
     font-weight: bold;
@@ -77,13 +86,15 @@ h1{
     text-align: right;
     margin-right: 50%;
 }
+
+/* Párrafos */
 P{
     width: 320px;
     font-size: 18px;
     
 }
 
-/*Para el botón ON/OFF switch*/
+/* Contenedor switch ON/OFF */
 .switch-container {
     margin-top: 20px;
     display: flex;
@@ -93,6 +104,7 @@ P{
    
 }
 
+/* Switch toggle */
 .switch {
     position: relative;
     display: inline-block;
@@ -100,12 +112,14 @@ P{
     height: 26px;
 }
 
+/* Input oculto del switch */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
+/* Slider del switch */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -118,6 +132,7 @@ P{
     border-radius: 34px;
 }
 
+/* Botón interno del slider */
 .slider:before {
     position: absolute;
     content: "";
@@ -130,21 +145,23 @@ P{
     border-radius: 50%;
 }
 
+/* Switch activado */
 input:checked + .slider {
     background-color: #6AA84F;
 }
 
+/* Posición botón activado */
 input:checked + .slider:before {
     transform: translateX(24px);
 }
 
+/* Etiqueta del switch */
 .switch-label {
     font-weight: bold;
     color: #333;
 }
 
-
-/*Orden de los cuadros (flexbox)*/
+/* Contenedor de mantenimientos */
 .mantenimientos-container {
     display: flex;
     flex-direction: column;
@@ -153,6 +170,7 @@ input:checked + .slider:before {
     gap: 40px;
 }
 
+/* Fila superior de cuadros */
 .fila-superior {
     display: flex;
     justify-content: center;
@@ -160,12 +178,14 @@ input:checked + .slider:before {
     width: 100%;
 }
 
+/* Fila inferior de cuadros */
 .fila-inferior {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
+/* Caja de mantenimiento */
 .mantenimiento-box {
     border: 2px solid black;
     width: 388px; 
@@ -175,12 +195,13 @@ input:checked + .slider:before {
     height: 230px;
 }
 
-/*Botón siguiente*/
+/* Botón central siguiente */
 .boton-central {
     margin-top: 40px;
     text-align: center;
 }
 
+/* Estilos botón siguiente */
 .boton-central button {
     padding: 12px 30px;
     font-size: 18px;
@@ -193,12 +214,13 @@ input:checked + .slider:before {
     transition: background-color 0.3s ease;
 }
 
+/* Hover botón siguiente */
 .boton-central button:hover {
     background-color: #558B3F;
 }
 
- /* ////////////// MODAL /////////////*/
- /* Fondo oscuro */
+/* Fondo modal */
+/* Fondo modal */
 .modal {
     display: none;
     position: fixed;
@@ -222,7 +244,7 @@ input:checked + .slider:before {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Botón de cerrar (X) */
+/* Botón cerrar modal (X) */
 .close {
     color: #aaa;
     float: right;
@@ -231,6 +253,7 @@ input:checked + .slider:before {
     cursor: pointer;
 }
 
+/* Hover botón cerrar */
 .close:hover {
     color: black;
 }
@@ -244,12 +267,13 @@ input:checked + .slider:before {
     gap: 10px;
 }
 
-/* Botón aceptar */
+/* Contenedor botón modal */
 .boton-modal {
     text-align: right;
     margin-top: 20px;
 }
 
+/* Botón aceptar modal */
 .boton-modal button {
     background-color: #6AA84F;
     color: white;
@@ -260,6 +284,7 @@ input:checked + .slider:before {
     cursor: pointer;
 }
 
+/* Hover botón aceptar */
 .boton-modal button:hover {
     background-color: #558B3F;
 }
