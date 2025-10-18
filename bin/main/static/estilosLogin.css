@@ -1,3 +1,4 @@
+/* Reset estilos */
 * {
     margin: 0px;
     padding: 0px;
@@ -9,6 +10,7 @@ body {
 
 }
 
+/* Navegación superior */
 ul {
     display: flex;
     gap: 20px;
@@ -19,22 +21,26 @@ ul {
     list-style: none;
 }
 
+/* Enlaces navegación */
 ul a {
     text-decoration: none;
     color: #fff;
 }
 
+/* Hover enlaces */
 ul a:hover {
     text-decoration: none;
     color: rgb(37, 231, 37);
 }
 
+/* Contenedor padre login */
 .padre-login {
     padding: 100px 0px;
     display: flex;
     justify-content: center;
 }
 
+/* Caja contenedor login */
 .contenedor-login {
     box-shadow: 5px 5px 10px rgb(103, 99, 99);
     display: grid;
@@ -44,8 +50,8 @@ ul a:hover {
     overflow: hidden;
 }
 
+/* Sección imagen */
 .imagen {
-    /*#f1ebd1*/
     background-color: #82e0aa;
     padding: 20px;
     display: flex;
@@ -53,6 +59,7 @@ ul a:hover {
     align-items: center;
 }
 
+/* Sección logeo */
 .logeo {
     padding-top: 30px;
     padding-bottom: 40px;
@@ -60,41 +67,51 @@ ul a:hover {
     padding-right: 30px;
 }
 
+/* Título h3 */
 h3 {
     text-align: center;
 }
 
+/* Imagen trabajador */
 .imagen-trabajador {
     text-align: center;
     width: 330px;
     height: auto;
 }
 
+/* Contenedor imagen usuario */
 .imagen-usuario {
     display: flex;
     justify-content: center;
     padding-bottom: 8px;
 }
 
+/* Imagen usuario */
 .imagen-usuario img {
     width: 130px;
     height: auto;
 }
 
+/* Campos de entrada */
 .value {
     display: flex;
     flex-direction: column;
     position: relative;
 }
+
+/* Select de selección */
 .seleccion select{
     width: 100%;
     height: 40px;
     border-radius: 8px;
 }
 
+/* Opciones del select */
 .seleccion select option{
     text-align: center;
 }
+
+/* Input de entrada */
 .value input {
     padding-left: 30px;
     height: 40px;
@@ -105,46 +122,53 @@ h3 {
     transition-duration:0.3s,0.3s;
     transition-timing-function:ease, ease;
 }
+
+/* Focus del input */
 .value input:focus{
     border: 1px solid rgb(7, 154, 7);
     box-shadow: 0 0 0 4px #8ff0b9;
     outline: none;
 }
 
- /* diseño del icono */
+/* Icono del campo */
 .value i {
     position: absolute;
     left: 10px;
     top: 60%;
     color: gray;
-    pointer-events: none; /* evita que bloquee clics */
+    pointer-events: none;
 }
 
-
+/* Espaciado entre campos */
 .espacio {
     margin-top: 22px;
 }
 
+/* Sección restablecer */
 .restablecer {
     display: flex;
     justify-content: flex-end;
 }
 
+/* Párrafo restablecer */
 .restablecer p {
     padding-right: 5px;
 }
 
+/* Etiquetas label */
 label {
     padding-bottom: 8px;
     font-size: 17px;
 }
 
+/* Contenedor botón */
 .boton{
     height: 40px;
     display: flex;
     align-items: center;
 }
 
+/* Estilos botón */
 .boton input {
     width: 100%;
     height: 40px;
@@ -152,6 +176,7 @@ label {
     border: 1px solid #a09f9f;
 }
 
+/* Hover botón */
 .boton input:hover {
     background-color: #808b96;
     color: #fff;
