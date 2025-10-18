@@ -6,10 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-/**
- * Entidad que representa una maquinaria registrada en el sistema.
- * Contiene información relevante para la gestión y seguimiento de equipos.
- */
 @Entity
 public class Maquinaria {
 	/**
