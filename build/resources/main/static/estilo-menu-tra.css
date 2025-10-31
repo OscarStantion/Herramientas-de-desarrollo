@@ -9,193 +9,226 @@
 
 .cerrar:hover {
     border: 2px solid bisque;
-    border-radius: 8px;
-    color: #fff;
-}
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    height: auto;
-}
-
-.izquierdo{
-    flex: 1 1 auto;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    background-color: #4b8361;
-    padding: 10px 0; 
-}
-.derecho{
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    background-color: rgb(48, 47, 47);
-    padding: 10px 0; 
-}
-.altura{
-    height: 80px;
-}
-
-li{
-    list-style: none;
-}
-
-li a {
-    text-decoration: none;
-    color: #fff;
-    border: 2px solid transparent;
-    padding: 8px;
-    font-size: 17px;
-}
-
-li a:hover {
-    border: 2px solid bisque;
-    border-radius: 8px;
-}
-
-/* Estilo especial para el logo */
-.logo {
-    animation-name: logo;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-.logo a {
-    font-size: 30px;
-    font-weight: bold;
-    user-select: none;
-    pointer-events: none;
-    cursor: default;
-    font-family: 'Courier New', monospace;
-}
-
-/* Animación de escalado */
-
-.gear {
-    display: inline-block;
-    animation: spin 2s linear infinite;
-}
-
-.screw {
-    display: inline-block;
-    animation: spin-reverse 2s linear infinite;
-}
-
-.tractor{
-    width: 330px;
-}
-.tractor img{
-    width: 110px;
-    height: auto;
-    animation: tractor-mov;
-    animation-duration: 6s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: normal
-}
-
-
-.tierra{
-    width: 110px;
-    animation-name: tierra-grande;
-    animation-duration: 6s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    margin-right: 25px;
-}
-.tierra img{
-    width: 100px;
-    height: auto;
-}
-
-@keyframes spin {
-    0% { 
-        transform: rotate(0deg);
-    }
-    100% { 
-        transform: rotate(360deg)
-        ;}
-}
-
-@keyframes spin-reverse {
-    0% { 
-        transform: rotate(0deg);
-    }
-    100% { 
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes logo {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.2);
-    }
-}
-@keyframes tractor-mov{
-    0%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(220px);
-    }
-}
-@keyframes tierra-grande{
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(1.3);
-    }
-}
-
-@media (max-width: 768px) {
-    .tractor,
-    .tierra {
-        display: none;
+    .cerrar {
+        /* Botón cerrar */
+        background: none;
+        border: 2px solid transparent;
+        color: #fff;
+        padding: 8px;
+        font-size: 15px;
+    
     }
 
-    nav {
-        flex-direction: column;
-        height: auto;
+    .cerrar:hover {
+        /* Hover cerrar */
+        border: 2px solid bisque;
+        border-radius: 8px;
+        color: #fff;
+    }
+
+    /* Reset base */
+    *{
+        margin: 0px;
         padding: 0px;
     }
 
-    .izquierdo,
-    .derecho {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        justify-content: center;
+    /* Barra de navegación */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        height: auto;
+    }
+
+    /* Sección izquierda nav */
+    .izquierdo{
+        flex: 1 1 auto;
+        display: flex;
+        gap: 30px;
         align-items: center;
-        padding: 10px 0;
+        justify-content: center;
+        background-color: #4b8361;
+        padding: 10px 0; 
+    }
+    .derecho{
+        /* Sección derecha nav */
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background-color: rgb(48, 47, 47);
+        padding: 10px 0; 
+    }
+    .altura{
+        /* Altura fija */
+        height: 80px;
     }
 
-    .logo a {
-        font-size: 22px;
-        text-align: center;
+    /* Lista sin estilos */
+    li{
+        list-style: none;
     }
 
+    /* Enlaces navegación */
     li a {
-        font-size: 16px;
-        padding: 6px;
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid transparent;
+        padding: 8px;
+        font-size: 17px;
     }
-}
+
+    /* Hover enlaces */
+    li a:hover {
+        border: 2px solid bisque;
+        border-radius: 8px;
+    }
+
+    /* Logo animado */
+    .logo {
+        animation-name: logo;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    /* Texto del logo */
+    .logo a {
+        font-size: 30px;
+        font-weight: bold;
+        user-select: none;
+        pointer-events: none;
+        cursor: default;
+        font-family: 'Courier New', monospace;
+    }
+
+    /* Engranaje giratorio */
+    .gear {
+        display: inline-block;
+        animation: spin 2s linear infinite;
+    }
+
+    /* Tornillo giratorio */
+    .screw {
+        display: inline-block;
+        animation: spin-reverse 2s linear infinite;
+    }
+
+    /* Contenedor tractor */
+    .tractor{
+        width: 330px;
+    }
+    .tractor img{
+        /* Imagen tractor animada */
+        width: 110px;
+        height: auto;
+        animation: tractor-mov;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal
+    }
+
+
+    /* Tierra animada */
+    .tierra{
+        width: 110px;
+        animation-name: tierra-grande;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        margin-right: 25px;
+    }
+    .tierra img{
+        /* Imagen tierra */
+        width: 100px;
+        height: auto;
+    }
+
+    /* Animación giro horario */
+    @keyframes spin {
+        0% { 
+            transform: rotate(0deg);
+        }
+        100% { 
+            transform: rotate(360deg)
+            ;}
+    }
+
+    /* Animación giro antihorario */
+    @keyframes spin-reverse {
+        0% { 
+            transform: rotate(0deg);
+        }
+        100% { 
+            transform: rotate(-360deg);
+        }
+    }
+
+    /* Animación escalar logo */
+    @keyframes logo {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
+    /* Animación movimiento tractor */
+    @keyframes tractor-mov{
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(220px);
+        }
+    }
+    /* Animación crecimiento tierra */
+    @keyframes tierra-grande{
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1.3);
+        }
+    }
+
+    /* Responsive móvil */
+    @media (max-width: 768px) {
+        .tractor,
+        .tierra {
+            display: none;
+        }
+
+        nav {
+            flex-direction: column;
+            height: auto;
+            padding: 0px;
+        }
+
+        .izquierdo,
+        .derecho {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo a {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        li a {
+            font-size: 16px;
+            padding: 6px;
+        }
+    }
 
 
 
@@ -205,68 +238,69 @@ li a:hover {
 
 
 
+    /* Contenido inicio trabajador */
 
 
 
-
-/*contenido inicio trabajador*/
-
-
-
-.fondo-tra {
-    position: relative;
-    background-image: url('img/maquinaria2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
-    display: flex;
+    /* Fondo imagen */
+    .fondo-tra {
+        position: relative;
+        background-image: url('img/maquinaria2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
     
-}
+    }
 
-.fondo-tra::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para más o menos oscuridad */
-    z-index: 2;
-}
+    /* Overlay oscuro */
+    .fondo-tra::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para más o menos oscuridad */
+        z-index: 2;
+    }
 
-/* Asegúrate que el contenido esté encima del overlay */
-.conte-parra {
-    position: relative;
-    z-index: 3;
-    width: 600px;
-    padding: 130px;
-    color: #fff;
-}
+    /* Contenido encima overlay */
+    .conte-parra {
+        position: relative;
+        z-index: 3;
+        width: 600px;
+        padding: 130px;
+        color: #fff;
+    }
 
 
 
 
-.conte-parra h1{
-    font-size: 40px;
-    color: #fff;
-    font-family: serif;
-}
-.conte-parra input{ 
-    margin-top: 10px;
-    width: 130px;
-    height: 37px;
-    border-radius: 7px;
-    border: 2px solid black;
-}
+    .conte-parra h1{
+        /* Título principal */
+        font-size: 40px;
+        color: #fff;
+        font-family: serif;
+    }
+    .conte-parra input{ 
+        /* Input pequeño */
+        margin-top: 10px;
+        width: 130px;
+        height: 37px;
+        border-radius: 7px;
+        border: 2px solid black;
+    }
 
-.conte-parra input:hover{
-    background-color: #848b8c;
-    box-shadow: 0px 0px 7px rgb(23, 22, 22);
-    color: #fff
-}
+    .conte-parra input:hover{
+        /* Hover input */
+        background-color: #848b8c;
+        box-shadow: 0px 0px 7px rgb(23, 22, 22);
+        color: #fff
+    }
 
 
