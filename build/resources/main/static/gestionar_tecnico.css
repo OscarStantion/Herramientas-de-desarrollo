@@ -1,3 +1,5 @@
+h1 {
+/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -7,21 +9,25 @@
     
 }
 
+/* Hover cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
+/* Reset base */
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/* Fondo página */
 body {
     background-color: #f1f8e9;
 }
 
+/* Barra navegación */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +35,7 @@ nav {
     height: auto;
 }
 
+/* Nav izquierda */
 .izquierdo {
     flex: 1 1 auto;
     display: flex;
@@ -39,6 +46,7 @@ nav {
     padding: 10px 0;
 }
 
+/* Nav derecha */
 .derecho {
     flex: 1 1 auto;
     display: flex;
@@ -49,14 +57,17 @@ nav {
     padding: 10px 0;
 }
 
+/* Altura nav */
 .altura {
     height: 80px;
 }
 
+/* Lista sin estilo */
 li {
     list-style: none;
 }
 
+/* Enlaces nav */
 li a {
     text-decoration: none;
     color: #fff;
@@ -65,13 +76,14 @@ li a {
     font-size: 17px;
 }
 
+/* Hover enlaces */
 li a:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-/* Estilo especial para el logo */
+/* Logo animado */
 .logo {
     animation-name: logo;
     animation-duration: 2s;
@@ -80,6 +92,7 @@ li a:hover {
     animation-direction: alternate;
 }
 
+/* Estilo link logo */
 .logo a {
     font-size: 30px;
     font-weight: bold;
@@ -89,8 +102,7 @@ li a:hover {
     font-family: 'Courier New', monospace;
 }
 
-/* Animación de escalado */
-
+/* Engranajes animados */
 .gear {
     display: inline-block;
     animation: spin 2s linear infinite;
@@ -101,10 +113,12 @@ li a:hover {
     animation: spin-reverse 2s linear infinite;
 }
 
+/* Contenedor tractor */
 .tractor {
     width: 330px;
 }
 
+/* Imagen tractor */
 .tractor img {
     width: 110px;
     height: auto;
@@ -116,6 +130,7 @@ li a:hover {
 }
 
 
+/* Contenedor tierra */
 .tierra {
     width: 110px;
     animation-name: tierra-grande;
@@ -131,6 +146,7 @@ li a:hover {
     height: auto;
 }
 
+/* Giro horario */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -141,6 +157,7 @@ li a:hover {
     }
 }
 
+/* Giro antihorario */
 @keyframes spin-reverse {
     0% {
         transform: rotate(0deg);
@@ -151,6 +168,7 @@ li a:hover {
     }
 }
 
+/* Escala logo */
 @keyframes logo {
     0% {
         transform: scale(1);
@@ -161,6 +179,7 @@ li a:hover {
     }
 }
 
+/* Movimiento tractor */
 @keyframes tractor-mov {
     0% {
         transform: translateX(0px);
@@ -171,6 +190,7 @@ li a:hover {
     }
 }
 
+/* Crecimiento tierra */
 @keyframes tierra-grande {
     0% {
         transform: scale(1);
@@ -181,6 +201,7 @@ li a:hover {
     }
 }
 
+/* Responsive móvil */
 @media (max-width: 768px) {
 
     .tractor,
@@ -219,6 +240,7 @@ li a:hover {
 
 
 
+/* Contenedor principal */
 .contenedor-padre{
     display: flex;
     flex-direction: column;
@@ -228,12 +250,14 @@ li a:hover {
 
 
 
+/* Título página */
 h1 {
     text-align: center;
     padding:30px 0px;
 	font-family: Arial, sans-serif;
 }
 
+/* Formulario contenedor */
 .form-container {
     max-width: 900px;
     margin: 0 auto 20px;
@@ -245,6 +269,7 @@ h1 {
     margin-bottom: 50px;
 }
 
+/* Grid formulario */
 .form-group {
     display: grid;
     grid-template-columns: 400px 400px;
@@ -253,11 +278,13 @@ h1 {
     justify-content: space-between;
 }
 
+/* Etiqueta campo */
 .form-group label {
     flex: 1 1 45%;
     font-weight: bold;
 }
 
+/* Input campo */
 .form-group input {
     width: 96%;
     padding: 8px;
@@ -266,6 +293,7 @@ h1 {
     background-color: #e1f5fe;
 }
 
+/* Botones contenedor */
 .botones {
     display: flex;
     justify-content: center;
@@ -273,6 +301,7 @@ h1 {
     margin-top: 20px;
 }
 
+/* Botones */
 .botones button {
     padding: 10px 20px;
     font-size: 16px;
@@ -289,12 +318,14 @@ h1 {
     transform: scale(1.1);
 }
 
+/* Tabla datos */
 table {
     width: 85%;
     border-collapse: collapse;
     background-color: #fff;
 }
 
+/* Celdas */
 th,
 td {
     border: 1px solid black;
@@ -308,11 +339,13 @@ th {
     background-color: #bdbdbd;
 }
 
+/* Celda datos */
 td{
     background-color: #a5d6a7;
     color:#fff;
 }
 
+/* Botón eliminar */
 .btn-eliminar{
     background-color: #cd6155;
     padding: 5px 15px;
@@ -331,6 +364,7 @@ td{
     background-color: #a93226;
 }
 
+/* Botón actualizar */
 .btn-actualizar{
     background-color: #5499c7;
     padding: 5px 15px;
@@ -343,7 +377,7 @@ td{
     width: 90px;
 }
 .btn-actualizar:hover{
-	    box-shadow: 1px 1px 3px rgb(92, 90, 90);
+    	box-shadow: 1px 1px 3px rgb(92, 90, 90);
     cursor: pointer;
     transform:scale(1.1) ;
     background-color: #2471a3;
