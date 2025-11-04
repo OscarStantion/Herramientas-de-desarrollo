@@ -1,5 +1,7 @@
 
 @charset "UTF-8";
+@charset "UTF-8";
+/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -9,21 +11,25 @@
     
 }
 
+/* Hover cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
+/* Reset base */
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/* Fondo página */
 body {
     background-color: #f1f8e9;
 }
 
+/* Barra navegación */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -31,6 +37,7 @@ nav {
     height: auto;
 }
 
+/* Nav izquierda */
 .izquierdo {
     flex: 1 1 auto;
     display: flex;
@@ -41,6 +48,7 @@ nav {
     padding: 10px 0;
 }
 
+/* Nav derecha */
 .derecho {
     flex: 1 1 auto;
     display: flex;
@@ -51,14 +59,17 @@ nav {
     padding: 10px 0;
 }
 
+/* Altura nav */
 .altura {
     height: 80px;
 }
 
+/* Lista sin estilo */
 li {
     list-style: none;
 }
 
+/* Enlaces nav */
 li a {
     text-decoration: none;
     color: #fff;
@@ -67,13 +78,14 @@ li a {
     font-size: 17px;
 }
 
+/* Hover enlaces */
 li a:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-/* Estilo especial para el logo */
+/* Logo animado */
 .logo {
     animation-name: logo;
     animation-duration: 2s;
@@ -82,6 +94,7 @@ li a:hover {
     animation-direction: alternate;
 }
 
+/* Estilo link logo */
 .logo a {
     font-size: 30px;
     font-weight: bold;
@@ -91,8 +104,7 @@ li a:hover {
     font-family: 'Courier New', monospace;
 }
 
-/* Animación de escalado */
-
+/* Engranajes animados */
 .gear {
     display: inline-block;
     animation: spin 2s linear infinite;
@@ -103,10 +115,12 @@ li a:hover {
     animation: spin-reverse 2s linear infinite;
 }
 
+/* Contenedor tractor */
 .tractor {
     width: 330px;
 }
 
+/* Imagen tractor */
 .tractor img {
     width: 110px;
     height: auto;
@@ -118,6 +132,7 @@ li a:hover {
 }
 
 
+/* Contenedor tierra */
 .tierra {
     width: 110px;
     animation-name: tierra-grande;
@@ -133,6 +148,7 @@ li a:hover {
     height: auto;
 }
 
+/* Giro horario */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -143,6 +159,7 @@ li a:hover {
     }
 }
 
+/* Giro antihorario */
 @keyframes spin-reverse {
     0% {
         transform: rotate(0deg);
@@ -153,6 +170,7 @@ li a:hover {
     }
 }
 
+/* Escala logo */
 @keyframes logo {
     0% {
         transform: scale(1);
@@ -163,6 +181,7 @@ li a:hover {
     }
 }
 
+/* Movimiento tractor */
 @keyframes tractor-mov {
     0% {
         transform: translateX(0px);
@@ -173,6 +192,7 @@ li a:hover {
     }
 }
 
+/* Crecimiento tierra */
 @keyframes tierra-grande {
     0% {
         transform: scale(1);
@@ -183,6 +203,7 @@ li a:hover {
     }
 }
 
+/* Responsive móvil */
 @media (max-width: 768px) {
 
     .tractor,
@@ -218,6 +239,7 @@ li a:hover {
 }
 
 
+/* Contenido página pago */
 .contenido-pago {
     display: flex;
     flex-direction: column;
@@ -225,6 +247,7 @@ li a:hover {
 
 }
 
+/* Título principal */
 h1 {
     padding: 30px 0px;
     text-align: center;
@@ -233,6 +256,7 @@ h1 {
 
 
 
+/* Tabla historial */
 table {
     margin: 0 auto 40px;
     width: 90%;
@@ -240,6 +264,7 @@ table {
     border: 2px solid black;
 }
 
+/* Celdas tabla */
 th,
 td {
     border: 1px solid black;
@@ -247,11 +272,13 @@ td {
     text-align: center;
 }
 
+/* Cabecera */
 th {
     background-color: #bdbdbd;
     color: black;
 }
 
+/* Celda contenido */
 td {
     background-color: #a5d6a7;
 }
