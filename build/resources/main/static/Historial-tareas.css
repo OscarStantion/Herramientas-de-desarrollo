@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -9,17 +9,20 @@
     
 }
 
+/* Hover cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
+/* Reset base */
 *{
     margin: 0px;
     padding: 0px;
     text-align: center;
 }
+/* Nav principal */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +30,7 @@ nav {
     height: auto;
 }
 
+/* Nav izquierda */
 .izquierdo{
     flex: 1 1 auto;
     display: flex;
@@ -37,6 +41,7 @@ nav {
     padding: 10px 0; 
 }
 .derecho{
+    /* Nav derecha */
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -46,13 +51,16 @@ nav {
     padding: 10px 0; 
 }
 .altura{
+    /* Altura nav */
     height: 80px;
 }
 
+/* Lista sin estilo */
 li{
     list-style: none;
 }
 
+/* Enlaces nav */
 li a {
     text-decoration: none;
     color: #fff;
@@ -61,12 +69,13 @@ li a {
     font-size: 17px;
 }
 
+/* Hover enlaces */
 li a:hover {
     border: 2px solid bisque;
     border-radius: 8px;
 }
 
-/* Estilo especial para el logo */
+/* Logo animado */
 .logo {
     animation-name: logo;
     animation-duration: 2s;
@@ -84,8 +93,7 @@ li a:hover {
     font-family: 'Courier New', monospace;
 }
 
-/* Animación de escalado */
-
+/* Engranajes animados */
 .gear {
     display: inline-block;
     animation: spin 2s linear infinite;
@@ -96,6 +104,7 @@ li a:hover {
     animation: spin-reverse 2s linear infinite;
 }
 
+/* Contenedor tractor */
 .tractor{
     width: 330px;
 }
@@ -110,6 +119,7 @@ li a:hover {
 }
 
 
+/* Contenedor tierra */
 .tierra{
     width: 110px;
     animation-name: tierra-grande;
@@ -124,6 +134,7 @@ li a:hover {
     height: auto;
 }
 
+/* Giro horario */
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
@@ -133,6 +144,7 @@ li a:hover {
         ;}
 }
 
+/* Giro antihorario */
 @keyframes spin-reverse {
     0% { 
         transform: rotate(0deg);
@@ -142,6 +154,7 @@ li a:hover {
     }
 }
 
+/* Escala logo */
 @keyframes logo {
     0% {
         transform: scale(1);
@@ -167,6 +180,7 @@ li a:hover {
     }
 }
 
+/* Responsive móvil */
 @media (max-width: 768px) {
     .tractor,
     .tierra {
