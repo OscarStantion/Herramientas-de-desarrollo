@@ -24,6 +24,8 @@ body {
     height: 100%;
 }
 
+    /* Reset base */
+
 body {
     font-family: Arial, sans-serif;
     background-image: url('/img/fondo-inicio.png');
@@ -50,6 +52,8 @@ body::before {
 /* Animación */
 @keyframes fadeInUp {
     0% {
+
+    /* Fondo y overlay */
         opacity: 0;
         transform: translateY(30px);
     }
@@ -75,6 +79,8 @@ body::before {
 .presentacion p,
 .presentacion form {
     animation: fadeInUp 1s ease forwards;
+
+    /* Presentación central */
     opacity: 0;
 }
 
@@ -104,6 +110,8 @@ body::before {
 .presentacion p {
     color: #fff;
     font-size: 17px;
+
+    /* Botón/entrada */
     padding: 0 100px;
     margin-bottom: 10px;
 }
@@ -126,6 +134,8 @@ input {
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+
+    /* Separador horizontal */
 input:hover {
     background-color: #117a65;
     box-shadow: 0 0 5px rgb(85, 83, 83);
