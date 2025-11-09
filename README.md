@@ -3,11 +3,11 @@
 [![CI - Integración Continua](https://github.com/OscarStantion/Herramientas-de-desarrollo/actions/workflows/ci.yml/badge.svg)](https://github.com/OscarStantion/Herramientas-de-desarrollo/actions/workflows/ci.yml)
 [![Code Quality](https://github.com/OscarStantion/Herramientas-de-desarrollo/actions/workflows/code-quality.yml/badge.svg)](https://github.com/OscarStantion/Herramientas-de-desarrollo/actions/workflows/code-quality.yml)
 
-## 📋 Descripción
+## Descripción
 
 Sistema de gestión de mantenimiento desarrollado con Spring Boot 3.5.0 y Java 21.
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Java 21**
 - **Spring Boot 3.5.0**
@@ -17,15 +17,15 @@ Sistema de gestión de mantenimiento desarrollado con Spring Boot 3.5.0 y Java 2
 - **PostgreSQL / H2 Database**
 - **Gradle**
 
-## 🚀 Integración Continua
+##  Integración Continua
 
 Este proyecto utiliza **GitHub Actions** para CI/CD:
 
-- ✅ Compilación automática en cada push
-- ✅ Ejecución de tests unitarios
-- ✅ Análisis de calidad de código
-- ✅ Generación de artefactos JAR
-- ✅ Reportes de tests
+-  Compilación automática en cada push
+-  Ejecución de tests unitarios
+-  Análisis de calidad de código
+-  Generación de artefactos JAR
+-  Reportes de tests
 
 ### Workflows configurados:
 
@@ -38,7 +38,7 @@ Este proyecto utiliza **GitHub Actions** para CI/CD:
    - Análisis de calidad de código
    - Verificación de dependencias
 
-## 📦 Instalación y Ejecución
+##  Instalación y Ejecución
 
 ### Requisitos previos
 - Java 21
@@ -67,7 +67,7 @@ cd Herramientas-de-desarrollo
 
 La aplicación estará disponible en: `http://localhost:8080`
 
-## 🧪 Testing
+##  Testing
 
 Los tests se ejecutan automáticamente en cada push mediante GitHub Actions.
 Para ejecutarlos localmente:
@@ -78,7 +78,7 @@ Para ejecutarlos localmente:
 
 Los reportes de tests se generan en: `build/reports/tests/test/index.html`
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 src/
@@ -89,7 +89,7 @@ src/
     └── java/          # Tests unitarios
 ```
 
-## 🤝 Contribuir
+##  Contribuir
 
 1. Fork el proyecto
 2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
@@ -99,10 +99,10 @@ src/
 
 Los workflows de CI se ejecutarán automáticamente en tu PR.
 
-## 📝 Licencia
+##  Licencia
 
 Este proyecto es parte de un curso de Herramientas de Desarrollo.
 
-## 👥 Autores
+##  Autores
 
-- Oscar Stantion - [@OscarStantion](https://github.com/OscarStantion)
+- Oscar Stantion y KingcaraKong - [@OscarStantion](https://github.com/OscarStantion)
