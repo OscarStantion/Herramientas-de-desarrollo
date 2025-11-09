@@ -1,5 +1,5 @@
+/* Botón cerrar */
 .cerrar {
-    /* Botón cerrar */
     background: none;
     border: 2px solid transparent;
     color: #fff;
@@ -8,19 +8,20 @@
     
 }
 
+/* Hover botón cerrar */
 .cerrar:hover {
-    /* Hover cerrar */
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-/* Reset base */
+/* Reset estilos */
 *{
     margin: 0px;
     padding: 0px;
     
 }
+
 /* Barra de navegación */
 nav {
     display: flex;
@@ -39,8 +40,9 @@ nav {
     background-color: #4b8361;
     padding: 10px 0; 
 }
+
+/* Sección derecha nav */
 .derecho{
-    /* Sección derecha nav */
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -49,8 +51,9 @@ nav {
     background-color: rgb(48, 47, 47);
     padding: 10px 0; 
 }
+
+/* Altura fija */
 .altura{
-    /* Altura fija */
     height: 80px;
 }
 
@@ -59,7 +62,7 @@ li{
     list-style: none;
 }
 
-/* Enlaces navegación */
+/* Enlaces de navegación */
 li a {
     text-decoration: none;
     color: #fff;
@@ -110,8 +113,9 @@ li a:hover {
 .tractor{
     width: 330px;
 }
+
+/* Imagen tractor animada */
 .tractor img{
-    /* Imagen tractor animada */
     width: 110px;
     height: auto;
     animation: tractor-mov;
@@ -120,7 +124,6 @@ li a:hover {
     animation-iteration-count: infinite;
     animation-direction: normal
 }
-
 
 /* Tierra animada */
 .tierra{
@@ -132,8 +135,9 @@ li a:hover {
     animation-direction: normal;
     margin-right: 25px;
 }
+
+/* Imagen tierra */
 .tierra img{
-    /* Imagen tierra */
     width: 100px;
     height: auto;
 }
@@ -167,6 +171,7 @@ li a:hover {
         transform: scale(1.2);
     }
 }
+
 /* Animación movimiento tractor */
 @keyframes tractor-mov{
     0%{
@@ -176,6 +181,7 @@ li a:hover {
         transform: translateX(220px);
     }
 }
+
 /* Animación crecimiento tierra */
 @keyframes tierra-grande{
     0%{
@@ -220,11 +226,9 @@ li a:hover {
     }
 }
 
-/* Contenido inicio trabajador */
+/* Contenido inicio */
 
-
-
-/* Fondo imagen */
+/* Fondo principal */
 .fondo-tra {
     position: relative;
     background-image: url('img/maquinaria2.jpg');
@@ -239,7 +243,7 @@ li a:hover {
     
 }
 
-/* Overlay oscuro */
+/* Overlay oscuro sobre fondo */
 .fondo-tra::before {
     content: "";
     position: absolute;
@@ -247,11 +251,11 @@ li a:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para más o menos oscuridad */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
-/* Contenido encima overlay */
+/* Contenedor de párrafo */
 .conte-parra {
     position: relative;
     z-index: 3;
@@ -260,14 +264,15 @@ li a:hover {
     color: #fff;
 }
 
+/* Título principal */
 .conte-parra h1{
-    /* Título principal */
     font-size: 40px;
     color: #fff;
     font-family: serif;
 }
+
+/* Botón principal */
 .conte-parra input{ 
-    /* Input pequeño */
     margin-top: 10px;
     width: 130px;
     height: 37px;
@@ -275,8 +280,8 @@ li a:hover {
     border: 2px solid black;
 }
 
+/* Hover botón principal */
 .conte-parra input:hover{
-    /* Hover input */
     background-color: #848b8c;
     box-shadow: 0px 0px 7px rgb(23, 22, 22);
     color: #fff

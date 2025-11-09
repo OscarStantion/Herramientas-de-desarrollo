@@ -1,0 +1,59 @@
+name: Release
+
+# Se ejecuta cuando se crea un tag de versión (v1.0.0, v1.1.0, etc.)
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Crear Release
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # Necesario para crear releases
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+    
+    - name: Configurar JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: gradle
+    
+    - name: Permisos para Gradle Wrapper
+      run: chmod +x gradlew
+    
+    - name: Build del proyecto
+      run: ./gradlew build --no-daemon
+    
+    - name: Obtener nombre del tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+    
+    - name: Crear Release en GitHub
+      uses: softprops/action-gh-release@v1
+      with:
+        files: build/libs/*.jar
+        body: |
+          ## 🚀 Release ${{ steps.get_version.outputs.VERSION }}
+          
+          ### 📦 Cambios
+          - Versión compilada y lista para producción
+          - JAR incluido en los assets
+          
+          ### 📥 Descarga
+          Descarga el archivo `.jar` de los assets abajo.
+          
+          ### ▶️ Ejecutar
+          ```bash
+          java -jar integrador-${{ steps.get_version.outputs.VERSION }}.jar
+          ```
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

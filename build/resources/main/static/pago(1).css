@@ -1,4 +1,4 @@
-    /* Reset base */
+    /* Reset estilos */
     * {
       margin: 0;
       padding: 0;
@@ -6,7 +6,7 @@
       font-family: 'Roboto', sans-serif;
     }
 
-    /* Fondo cuerpo */
+    /* Fondo body */
     body {
       background-color: #ffffff75;
       color: #000;
@@ -19,12 +19,12 @@
       text-align: center;
     }
 
-    /* Subtítulo */
+    /* Título principal */
     h2 {
       margin-bottom: 20px;
     }
 
-    /* Tabla datos */
+    /* Tabla de pagos */
     table {
       margin: 0 auto 40px;
       width: 90%;
@@ -32,20 +32,20 @@
       border: 2px solid black;
     }
 
-    /* Celdas tabla */
+    /* Celdas de tabla */
     th, td {
       border: 1px solid black;
       padding: 10px;
       text-align: center;
     }
 
-    /* Cabecera tabla */
+    /* Encabezados de tabla */
     th {
       background-color: #bdbdbd;
       color: black;
     }
 
-    /* Celda contenido */
+    /* Celdas de datos */
     td {
       background-color: #a5d6a7;
     }
@@ -55,7 +55,7 @@
       margin-top: 20px;
     }
 
-    /* Etiqueta campo */
+    /* Labels del formulario */
     label {
       display: block;
       margin: 10px auto 5px;
@@ -64,7 +64,7 @@
       font-weight: bold;
     }
 
-    /* Campos entrada */
+    /* Inputs y selects */
     input[type="text"], select {
       width: 300px;
       padding: 10px;
@@ -84,7 +84,8 @@
       cursor: pointer;
     }
 
-    /* Hover botón */
+    /* Hover botón enviar */
     .btn-submit:hover {
       background-color: #388e3c;
     }
+
