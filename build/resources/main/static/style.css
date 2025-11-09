@@ -13,17 +13,23 @@
     color: #fff;
 }
 
+/* Botón cerrar */
+
 *{
     margin: 0px;
     padding: 0px;
     text-align: center;
 }
+
+/* Reset base */
 nav {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     height: auto;
 }
+
+/* Barra navegación */
 
 .izquierdo{
     flex: 1 1 auto;
@@ -73,6 +79,8 @@ li a:hover {
     animation-direction: alternate;
 }
 
+/* Logo animado */
+
 .logo a {
     font-size: 30px;
     font-weight: bold;
@@ -89,12 +97,17 @@ li a:hover {
     animation: spin 2s linear infinite;
 }
 
+/* Engranajes animados */
+
 .screw {
     display: inline-block;
     animation: spin-reverse 2s linear infinite;
 }
 
+/* Tornillo animado */
+
 .tractor{
+    /* Contenedor tractor */
     width: 330px;
 }
 .tractor img{
@@ -109,6 +122,7 @@ li a:hover {
 
 
 .tierra{
+    /* Contenedor tierra */
     width: 110px;
     animation-name: tierra-grande;
     animation-duration: 6s;
@@ -122,6 +136,7 @@ li a:hover {
     height: auto;
 }
 
+/* Keyframes giro horario */
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
