@@ -1,4 +1,3 @@
-/* Botón cerrar */
 .cerrar {
     background: none;
     border: 2px solid transparent;
@@ -8,21 +7,21 @@
     
 }
 
-/* Hover botón cerrar */
 .cerrar:hover {
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-/* Reset estilos */
+/* Botón cerrar */
+
 *{
     margin: 0px;
     padding: 0px;
     text-align: center;
 }
 
-/* Barra de navegación */
+/* Reset base */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +29,8 @@ nav {
     height: auto;
 }
 
-/* Sección izquierda nav */
+/* Barra navegación */
+
 .izquierdo{
     flex: 1 1 auto;
     display: flex;
@@ -40,8 +40,6 @@ nav {
     background-color: #4b8361;
     padding: 10px 0; 
 }
-
-/* Sección derecha nav */
 .derecho{
     flex: 1 1 auto;
     display: flex;
@@ -51,18 +49,14 @@ nav {
     background-color: rgb(48, 47, 47);
     padding: 10px 0; 
 }
-
-/* Altura fija */
 .altura{
     height: 80px;
 }
 
-/* Lista sin estilos */
 li{
     list-style: none;
 }
 
-/* Enlaces navegación */
 li a {
     text-decoration: none;
     color: #fff;
@@ -71,13 +65,12 @@ li a {
     font-size: 17px;
 }
 
-/* Hover enlaces */
 li a:hover {
     border: 2px solid bisque;
     border-radius: 8px;
 }
 
-/* Logo animado */
+/* Estilo especial para el logo */
 .logo {
     animation-name: logo;
     animation-duration: 2s;
@@ -86,7 +79,8 @@ li a:hover {
     animation-direction: alternate;
 }
 
-/* Texto del logo */
+/* Logo animado */
+
 .logo a {
     font-size: 30px;
     font-weight: bold;
@@ -96,24 +90,26 @@ li a:hover {
     font-family: 'Courier New', monospace;
 }
 
-/* Engranaje giratorio */
+/* Animación de escalado */
+
 .gear {
     display: inline-block;
     animation: spin 2s linear infinite;
 }
 
-/* Tornillo giratorio */
+/* Engranajes animados */
+
 .screw {
     display: inline-block;
     animation: spin-reverse 2s linear infinite;
 }
 
-/* Contenedor tractor */
+/* Tornillo animado */
+
 .tractor{
+    /* Contenedor tractor */
     width: 330px;
 }
-
-/* Imagen tractor animada */
 .tractor img{
     width: 110px;
     height: auto;
@@ -124,8 +120,9 @@ li a:hover {
     animation-direction: normal
 }
 
-/* Tierra animada */
+
 .tierra{
+    /* Contenedor tierra */
     width: 110px;
     animation-name: tierra-grande;
     animation-duration: 6s;
@@ -134,14 +131,12 @@ li a:hover {
     animation-direction: normal;
     margin-right: 25px;
 }
-
-/* Imagen tierra */
 .tierra img{
     width: 100px;
     height: auto;
 }
 
-/* Animación giro horario */
+/* Keyframes giro horario */
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
@@ -151,7 +146,6 @@ li a:hover {
         ;}
 }
 
-/* Animación giro antihorario */
 @keyframes spin-reverse {
     0% { 
         transform: rotate(0deg);
@@ -161,7 +155,6 @@ li a:hover {
     }
 }
 
-/* Animación escalar logo */
 @keyframes logo {
     0% {
         transform: scale(1);
@@ -170,8 +163,6 @@ li a:hover {
         transform: scale(1.2);
     }
 }
-
-/* Animación movimiento tractor */
 @keyframes tractor-mov{
     0%{
         transform: translateX(0px);
@@ -180,8 +171,6 @@ li a:hover {
         transform: translateX(220px);
     }
 }
-
-/* Animación crecimiento tierra */
 @keyframes tierra-grande{
     0%{
         transform: scale(1);
@@ -191,7 +180,6 @@ li a:hover {
     }
 }
 
-/* Responsive móvil */
 @media (max-width: 768px) {
     .tractor,
     .tierra {
