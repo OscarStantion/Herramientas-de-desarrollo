@@ -1,5 +1,5 @@
+/* Botón cerrar */
 .cerrar {
-    /* Botón cerrar */
     background: none;
     border: 2px solid transparent;
     color: #fff;
@@ -8,45 +8,45 @@
     
 }
 
+/* Hover botón cerrar */
 .cerrar:hover {
-    /* Hover cerrar */
     border: 2px solid bisque;
     border-radius: 8px;
     color: #fff;
 }
 
-/* Reset base */
+/* Reset estilos */
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-/* Contenedor hero */
+/* Contenedor centrado */
 .hero{
     display: flex;
     justify-content: center;
 }
 
-/* Caja correo */
+/* Caja del correo */
 .hero-correo{
     box-shadow: 0px 0px 8px rgb(145, 142, 142);
     width: 500px;
 }
 
-/* Título sección */
+/* Sección título */
 .titulo{
     background-color: rgb(188, 188, 234);
     padding: 15px 20px;
 }
 
-/* Párrafo destacado */
+/* Párrafo 1 */
 .parra1{
     font-size: 17px;
     color: rgb(157, 98, 157);
 }
 
-/* Párrafo secundario */
+/* Párrafo 2 */
 .parra2{
     color: rgb(104, 102, 102);
 }
@@ -56,7 +56,7 @@ form{
     padding: 20px 20px;
 }
 
-/* Grupo campo correo */
+/* Campo de correo */
 .correo-dato{
     display: flex;
     flex-direction: column;
@@ -64,12 +64,11 @@ form{
     position: relative;
 }
 
-/* Label campo */
 .correo-dato label{
     margin-bottom: 8px;
 }
 
-/* Input campo correo */
+/* Input del correo */
 .correo-dato input{
     height: 40px;
     border-radius: 8px;
@@ -80,14 +79,14 @@ form{
     transition-timing-function: ease, ease;
 }
 
-/* Focus input */
+/* Focus del input */
 .correo-dato input:focus{
     box-shadow: 0 0 0 4px #8ff0b9;
     border: 1px solid rgb(7, 154, 7);
     outline: none;
 }
 
-/* Icono dentro input */
+/* Icono del input */
 .correo-dato i{
     position: absolute;
     pointer-events: none;
@@ -102,7 +101,7 @@ form{
     justify-content: space-between;
 }
 
-/* Estilos botones */
+/* Estilos botón */
 .boton input{
     height: 40px;
     padding: 0px 10px;
@@ -110,7 +109,7 @@ form{
     border: 1px solid #a09f9f;
 }
 
-/* Hover botones */
+/* Hover botón */
 .boton input:hover{
     background-color: #808b96;
     color: #fff;

@@ -1,3 +1,4 @@
+/* Reset estilos */
 * {
     margin: 0px;
     padding: 0px;
@@ -5,12 +6,11 @@
 
 }
 
-/* Reset base */
 body {
 
 }
 
-/* Barra navegación */
+/* Navegación superior */
 ul {
     display: flex;
     gap: 20px;
@@ -21,7 +21,7 @@ ul {
     list-style: none;
 }
 
-/* Enlaces nav */
+/* Enlaces navegación */
 ul a {
     text-decoration: none;
     color: #fff;
@@ -33,14 +33,14 @@ ul a:hover {
     color: rgb(37, 231, 37);
 }
 
-/* Padding sección */
+/* Contenedor padre login */
 .padre-login {
     padding: 100px 0px;
     display: flex;
     justify-content: center;
 }
 
-/* Panel central */
+/* Caja contenedor login */
 .contenedor-login {
     box-shadow: 5px 5px 10px rgb(103, 99, 99);
     display: grid;
@@ -50,9 +50,8 @@ ul a:hover {
     overflow: hidden;
 }
 
-/* Fondo imagen */
+/* Sección imagen */
 .imagen {
-    /*#f1ebd1*/
     background-color: #82e0aa;
     padding: 20px;
     display: flex;
@@ -60,7 +59,7 @@ ul a:hover {
     align-items: center;
 }
 
-/* Lado login */
+/* Sección logeo */
 .logeo {
     padding-top: 30px;
     padding-bottom: 40px;
@@ -68,7 +67,7 @@ ul a:hover {
     padding-right: 30px;
 }
 
-/* Título sección */
+/* Título h3 */
 h3 {
     text-align: center;
 }
@@ -80,39 +79,39 @@ h3 {
     height: auto;
 }
 
-/* Contenedor avatar */
+/* Contenedor imagen usuario */
 .imagen-usuario {
     display: flex;
     justify-content: center;
     padding-bottom: 8px;
 }
 
-/* Avatar tamaño */
+/* Imagen usuario */
 .imagen-usuario img {
     width: 130px;
     height: auto;
 }
 
-/* Campo valor */
+/* Campos de entrada */
 .value {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-/* Select estilo */
+/* Select de selección */
 .seleccion select{
     width: 100%;
     height: 40px;
     border-radius: 8px;
 }
 
-/* Option centrado */
+/* Opciones del select */
 .seleccion select option{
     text-align: center;
 }
 
-/* Inputs estilo */
+/* Input de entrada */
 .value input {
     padding-left: 30px;
     height: 40px;
@@ -124,51 +123,52 @@ h3 {
     transition-timing-function:ease, ease;
 }
 
-/* Focus input */
+/* Focus del input */
 .value input:focus{
     border: 1px solid rgb(7, 154, 7);
     box-shadow: 0 0 0 4px #8ff0b9;
     outline: none;
 }
 
-/* Icono campo */
+/* Icono del campo */
 .value i {
     position: absolute;
     left: 10px;
     top: 60%;
     color: gray;
-    pointer-events: none; /* evita que bloquee clics */
+    pointer-events: none;
 }
 
-/* Separador vertical */
+/* Espaciado entre campos */
 .espacio {
     margin-top: 22px;
 }
 
-/* Link restablecer */
+/* Sección restablecer */
 .restablecer {
     display: flex;
     justify-content: flex-end;
 }
 
+/* Párrafo restablecer */
 .restablecer p {
     padding-right: 5px;
 }
 
-/* Etiqueta campos */
+/* Etiquetas label */
 label {
     padding-bottom: 8px;
     font-size: 17px;
 }
 
-/* Botón contenedor */
+/* Contenedor botón */
 .boton{
     height: 40px;
     display: flex;
     align-items: center;
 }
 
-/* Botón input */
+/* Estilos botón */
 .boton input {
     width: 100%;
     height: 40px;
