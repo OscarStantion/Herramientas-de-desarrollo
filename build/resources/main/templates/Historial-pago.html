@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+</head>
+
+<!-- Estilos página -->
 <link rel="stylesheet" href="Historial-pago.css">
+</head>
 </head>
 
 <body>
+    <!-- Barra navegación -->
     <nav>
         <ul class="izquierdo altura">
             <li class="logo">
@@ -29,8 +34,11 @@
   <button type="submit" class="cerrar">Cerrar Sesión</button>
 </form>  </li>        </ul>
     </nav>
+    <!-- Contenido historial -->
     <div class="contenido-pago">
+        <!-- Título sección -->
         <h1>HISTORIAL DE PAGOS</h1>
+        <!-- Tabla pagos -->
         <table>
             <thead>
                 <tr>
@@ -45,7 +53,7 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <!-- Filas dinámicas -->
    <tr th:each="pago : ${historialPagos}">
     <td th:text="${pago.id}"></td>
     <td th:text="${pago.nombre}"></td>
