@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FERRELUIS - Mantenimientos Pendientes</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Estilos locales -->
+  <style>
     .btn-completar {
       background-color: #4CAF50;
       color: white;
@@ -27,33 +29,42 @@
   </style>
   </head>
   <body>
+    <!-- Barra navegación -->
     <nav>
     <ul class="izquierdo altura">
+      <!-- Parte izquierda -->
       <li class="logo">
         <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
       </li>
+      <!-- Imagen tractor -->
       <li class="tractor">
         <img src="img/tractor.png" alt="" />
       </li>
+      <!-- Imagen tierra -->
       <li class="tierra">
         <img src="img/tierra.png" alt="" />
       </li>
     </ul>
+    <!-- Parte derecha -->
     <ul class="derecho altura">
       <li><a href="menu-trabjador.html">Inicio</a></li>
       <li><a href="index.html">Mantenimientos pendientes</a></li>
       <li><a href="realizados.html">Historial de tareaas</a></li>
 <li>
+      <!-- Cerrar sesión -->
       <form th:action="@{/logout}" method="post">
   <button type="submit" class="cerrar">Cerrar Sesión</button>
 </form>  </li>    </ul>
   </nav>
   
+  <!-- Contenido principal -->
   <div class="fondo-tra">
+   <!-- Encabezado página -->
    <h1>MANTENIMIENTOS PENDIENTES</h1>
 
     <!-- Tabla de mantenimientos -->
     <table>
+      <!-- Encabezados tabla -->
       <thead>
         <tr>
           <th>ID</th>
@@ -65,6 +76,7 @@
         </tr>
       </thead>
       <tbody>
+        <!-- Fila dinámica -->
         <tr th:each="tarea : ${tareas}">
           <td th:text="${tarea.id}">ID</td>
           <td th:text="${tarea.maquina}">Máquina</td>
@@ -83,6 +95,7 @@
         </tr>
         <!-- Mensaje cuando no hay tareas -->
         <tr th:if="${#lists.isEmpty(tareas)}">
+          <!-- Sin tareas -->
           <td colspan="6" style="text-align: center; padding: 20px; color: #666;">
             No tienes tareas pendientes por el momento
           </td>
@@ -103,7 +116,6 @@
   
   </div>
   
-    <!-- Título principal -->
-   
+    <!-- Fin cuerpo -->
   </body>
 </html>
