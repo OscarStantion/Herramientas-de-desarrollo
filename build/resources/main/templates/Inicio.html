@@ -4,45 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Título página -->
     <title>Document</title>
   </head>
+  <!-- Estilos de inicio -->
   <link rel="stylesheet" href="Estilos-inicio.css" />
 
   <body>
+<!-- Barra navegación -->
 <nav>
     <ul class="izquierdo altura">
+      <!-- Logo principal -->
       <li class="logo">
         <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
       </li>
+      <!-- Imagen tractor -->
       <li class="tractor">
         <img src="img/tractor.png" alt="" />
       </li>
+      <!-- Imagen tierra -->
       <li class="tierra">
         <img src="img/tierra.png" alt="" />
       </li>
     </ul>
+    <!-- Menú derecho -->
     <ul class="derecho altura">
       <li><a href="Inicio.html">Inicio</a></li>
       <li><a href="registro_maquinaria.html">Registrar servicio</a></li>
       <li><a href="gestionar_tecnico.html">Gestionar técnico</a></li>
       <li><a href="Historial-pago.html">Historial de pago</a></li>
 <li>
+      <!-- Botón salir -->
       <form th:action="@{/logout}" method="post">
   <button type="submit" class="cerrar">Cerrar Sesión</button>
 </form>  </li>    </ul>
   </nav>
    
+ <!-- Fondo principal -->
  <div class="fondo-tra">
       <div class="conte-parra">
+        <!-- Formulario inicio -->
         <form action="/empezar-administrador" method="get">
+        <!-- Título bienvenida -->
         <h1>Bienvenido al Sistema de Mantenimiento de Maquinaria Pesada</h1>
         <hr>
+        <!-- Texto de presentación -->
         <p class="parrafo-presentacion">
           Esta plataforma ha sido diseñada exclusivamente para el personal técnico y operativo.
           Aquí podrás registrar mantenimientos, consultar el historial de equipos y gestionar tareas diarias de forma
           rápida, segura y eficiente.
           Tu trabajo es clave para el buen funcionamiento de nuestras operaciones. ¡Gracias por tu compromiso!     
         </p>
+        <!-- Botón empezar -->
         <input type="submit" value="Empezar">
         </form>
       </div>
