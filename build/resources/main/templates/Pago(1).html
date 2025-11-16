@@ -3,13 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de página -->
     <title>Registro de Pago - FERRELUIS</title>
+    <!-- Fuente externa Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- Estilos de pago -->
     <link rel="stylesheet" href="pago(1).css" />
   </head>
   <body>
+    <!-- Contenido principal -->
     <main>
+      <!-- Título sección -->
       <h2>REGISTRO DE PAGO</h2>
+      <!-- Tabla de resumen -->
       <table>
         <thead>
           <tr>
@@ -24,6 +30,7 @@
           </tr>
         </thead>
         <tbody>
+         <!-- Fila con datos -->
          <tbody>
   <tr th:if="${ultimoMantenimiento != null}">
   <td th:text="${ultimaMaquinaria.id}"></td>
@@ -36,15 +43,18 @@
    <td th:text="${#numbers.formatDecimal(ultimoPago.precio * 1.18, 1, 'POINT', 2, 'POINT')}"></td>
 </tr>
 
+<!-- Mensaje sin datos -->
 <tr th:if="${ultimoMantenimiento == null}">
   <td colspan="5">No hay datos de mantenimiento disponibles.</td>
 </tr>
         </tbody>
       </table>
 
+      <!-- Sección de pago -->
       <section class="form-section">
         <!-- Se elimina action="pagar" para manejar con JS -->
         <form id="form-pago">
+          <!-- Título método pago -->
           <h2>MÉTODO DE PAGO</h2>
 
           <label for="metodo-pago">Método de pago</label>
@@ -60,11 +70,13 @@
           </select>
           <br>
 
+          <!-- Botón pagar -->
           <button type="submit" class="btn-submit">Pagar</button>
         </form>
       </section>
     </main>
 
+    <!-- Lógica de pago JS -->
     <script>
       document.getElementById("form-pago").addEventListener("submit", function (e) {
         e.preventDefault(); // Evitar envío tradicional del formulario
