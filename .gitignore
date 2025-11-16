@@ -45,3 +45,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+logs/
+*.log
+
+### Docker volumes (no commitear datos de base de datos) ###
+postgres_data/
