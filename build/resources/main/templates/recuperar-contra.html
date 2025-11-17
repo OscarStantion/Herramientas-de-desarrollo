@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título página -->
     <title>Recuperar contraseña</title>
+    <!-- Estilos de página -->
     <link rel="stylesheet" href="estilos-recuperar-contra.css" />
     <script
       src="https://kit.fontawesome.com/da157044bb.js"
@@ -12,11 +14,14 @@
   </head>
 
   <body>
+    <!-- Contenedor principal -->
     <div class="contenedor-recuperar">
       <div class="recuperar">
+        <!-- Título recuperar -->
         <h1>Recuperar contraseña</h1>
         <p>Introduce tu nueva contraseña y repítela.</p>
         <hr />
+        <!-- Formulario cambio -->
         <form id="form-recuperar" th:action="@{/actualizar-contraseña}" method="post">
           <div class="contra">
             <label class="espacio">Nueva contraseña: <span th:if="${errorContra}" th:text="${errorContra}" style="color:red; margin-left: 5px"></span></label>
@@ -39,6 +44,7 @@
             <i class="fa-solid fa-lock"></i>
           </div>
           <div class="boton">
+            <!-- Botón cambiar -->
             <input type="submit" value="Cambiar" />
           </div>
         </form>
