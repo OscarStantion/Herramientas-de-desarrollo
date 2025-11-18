@@ -3,76 +3,97 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Título página -->
   <title>Registro de Maquinaria</title>
+  <!-- Estilos registro -->
   <link rel="stylesheet" href="registro_maquinaria.css" />
 </head>
 
 <body>
+  <!-- Barra navegación -->
   <nav>
     <ul class="izquierdo altura">
+      <!-- Parte izquierda -->
       <li class="logo">
         <a href="">FERRELUIS <span class="gear">🔧</span><span class="screw">🪛</span></a>
       </li>
+      <!-- Imagen tractor -->
       <li class="tractor">
         <img src="img/tractor.png" alt="" />
       </li>
+      <!-- Imagen tierra -->
       <li class="tierra">
         <img src="img/tierra.png" alt="" />
       </li>
     </ul>
+    <!-- Menú derecho -->
     <ul class="derecho altura">
       <li><a href="Inicio.html">Inicio</a></li>
       <li><a href="registro_maquinaria.html">Registrar servicio</a></li>
       <li><a href="gestionar_tecnico.html">Gestionar técnico</a></li>
       <li><a href="Historial-pago.html">Historial de pago</a></li>
 <li>
+      <!-- Botón salir -->
       <form th:action="@{/logout}" method="post">
   <button type="submit" class="cerrar">Cerrar Sesión</button>
 </form>  </li>    </ul>
   </nav>
 
 
+  <!-- Título registro -->
   <h2>REGISTRO DE MAQUINARIA</h2>
+  <!-- Contenedor formulario -->
   <div class="form-container">
+<!-- Formulario registrar -->
 <form th:action="@{/registrar}" method="post">
+      <!-- Sección cliente -->
       <h3>DATOS DEL CLIENTE</h3>
       <hr>
+      <!-- Campo nombre -->
       <div class="form-group">
         <label for="nombre">Nombre *</label>
         <input type="text" id="nombre" name="nombre" placeholder="Carlos" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Este campo no puede contener numeros" required />
       </div>
 
+      <!-- Campo apellido -->
       <div class="form-group">
         <label for="apellido">Apellido *</label>
         <input type="text" id="apellido" name="apellido" placeholder="Ramírez" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Este campo no puede contener numeros"required />
       </div>
 
+      <!-- Campo celular -->
       <div class="form-group">
         <label for="celular">Número de Celular *</label>
         <input type="text" id="celular" name="numeroCelular" placeholder="987654321" pattern="[0-9]{9}" title="Ingrese un número de celular válido de 9 dígitos" required />
       </div>
 
+      <!-- Campo email -->
       <div class="form-group">
         <label for="email">Gmail *</label>
         <input type="email" id="gmail" name="gmail" placeholder="carlos.ramirez@gmail.com" required />
       </div>
+      <!-- Sección maquinaria -->
       <h3>DATOS DE LA MAQUINARIA</h3>
       <hr>
+      <!-- Campo marca -->
       <div class="form-group">
         <label for="marca">Marca *</label>
         <input type="text" id="marca" name="marca" placeholder="Caterpillar" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Este campo no puede contener numeros" required />
       </div>
 
+      <!-- Campo modelo -->
       <div class="form-group">
         <label for="modelo">Modelo *</label>
         <input type="text" id="modelo" name="modelo" placeholder="320D2" required />
       </div>
 
+      <!-- Campo serie -->
       <div class="form-group">
         <label for="num_serie">Número de Serie *</label>
         <input type="text" id="num_serie" name="numeroSerie" placeholder="CAT0320DEWRN00123" required />
       </div>
 
+      <!-- Campo tipo -->
       <div class="form-group">
         <label for="tipo">Tipo de Maquinaria *</label>
         <select id="tipo" name="tipoMaquinaria" required>
@@ -84,25 +105,30 @@
         </select>
       </div>
 
+      <!-- Campo año -->
       <div class="form-group">
         <label for="anio">Año de Fabricación *</label>
         <input type="number" id="anio" name="anioFabricacion" placeholder="2024" min="1900" max="2025" required />
       </div>
 
+      <!-- Campo motor -->
       <div class="form-group">
         <label for="num_motor">Número de Motor *</label>
         <input type="text" id="num_motor" name="numeroMotor" placeholder="C7N-00235" required />
       </div>
+      <!-- Campo horas -->
       <div class="form-group">
         <label for="horasOperacion">Horas de Operación *</label>
         <input type="number" id="horasOperación" name="horasOperacion" placeholder="Ingrese cantidad de horas"
           min="0" required />
       </div>
 
+      <!-- Campo kilometraje -->
       <div class="form-group">
         <label for="kilometraje">Kilometraje *</label>
         <input type="number" id="kilometraje" name="kilometraje" placeholder="Ingrese el kilometraje" min="0" required />
       </div>
+      <!-- Botón registrar -->
       <input type="submit" class="btn-enviar" value="Registrar Maquinaria" />
     </form>
 
