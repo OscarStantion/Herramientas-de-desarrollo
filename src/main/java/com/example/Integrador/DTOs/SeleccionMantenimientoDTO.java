@@ -3,32 +3,41 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class SeleccionMantenimientoDTO {
+	// Tipos elegidos
 	private List<Long> tiposSeleccionados;
+	// Fecha salida
 	private LocalDate fechaSalida;
-    private Integer idMaquinaria;
+	// Id maquinaria
+	private Integer idMaquinaria;
 
-    public Integer getIdMaquinaria() {
+	// Obtener id maquinaria
+	public Integer getIdMaquinaria() {
 		return idMaquinaria;
 	}
 
+	// Establecer id maquinaria
 	public void setIdMaquinaria(Integer idMaquinaria) {
 		this.idMaquinaria = idMaquinaria;
 	}
 
 
-    public List<Long> getTiposSeleccionados() {
+	// Obtener tipos seleccionados
+	public List<Long> getTiposSeleccionados() {
 		return tiposSeleccionados;
 	}
 
+	// Establecer tipos seleccionados
 	public void setTiposSeleccionados(List<Long> tiposSeleccionados) {
 		this.tiposSeleccionados = tiposSeleccionados;
 	}
 
+	// Obtener fecha salida
 	public LocalDate getFechaSalida() {
-        return fechaSalida;
-    }
+		return fechaSalida;
+	}
 
-    public void setFechaSalida(LocalDate fechaSalida) {
-        this.fechaSalida = fechaSalida;
-    }
+	// Establecer fecha salida
+	public void setFechaSalida(LocalDate fechaSalida) {
+		this.fechaSalida = fechaSalida;
+	}
 }
