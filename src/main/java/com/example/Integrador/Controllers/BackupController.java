@@ -11,14 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.Integrador.Service.DatabaseBackupService;
 
 // Controlador para operaciones de backup
+// Rutas API backup
 @RestController
 @RequestMapping("/api/backup")
 public class BackupController {
     
     @Autowired
+    // Servicio base datos
     private DatabaseBackupService backupService; // Servicio de backup // Servicio de backup
     
     // Crea backup manual de la BD
+    // Crear backup manual
     @PostMapping("/manual")
     public ResponseEntity<String> createManualBackup() {
         try {
@@ -31,6 +34,7 @@ public class BackupController {
     }
     
     // Consulta estado del servicio backup
+    // Estado servicio backup
     @GetMapping("/status")
     public ResponseEntity<String> getBackupStatus() {
         return ResponseEntity.ok("Servicio de backup automático está activo. " +
