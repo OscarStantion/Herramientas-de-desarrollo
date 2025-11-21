@@ -8,23 +8,32 @@ import jakarta.persistence.Id;
 public class Roles {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	// Clave primaria
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+    
+	// Nombre del rol
 	private String nombre;
-	
+    
+	// Obtener id
 	public int getId() {
 		return id;
 	}
+
+	// Asignar id
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	// Obtener nombre
 	public String getNombre() {
 		return nombre;
 	}
+
+	// Asignar nombre
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	
+    
+    
 }
