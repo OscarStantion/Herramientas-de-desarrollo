@@ -16,14 +16,18 @@ import com.example.Integrador.Repositorios.PlanMantenimientoRepository;
 import com.example.Integrador.Repositorios.RelacionMantenimientoRepository;
 
 @Service
+// Servicio relaciones
 public class RelacionServicio {
 
     @Autowired
+    // Repo relaciones
     private RelacionMantenimientoRepository relacionRepository;
 
     @Autowired
+    // Repo planes
     private PlanMantenimientoRepository planRepository;
 
+    // Crear y guardar relaciones
     public void guardarRelacion(Integer idMaquinaria, Integer idTecnico, List<Long> tiposSeleccionados, LocalDate fechaSalida) {
         System.out.println("=== GUARDANDO RELACIÓN ===");
         System.out.println("ID Maquinaria: " + idMaquinaria);
@@ -32,10 +36,12 @@ public class RelacionServicio {
         System.out.println("Fecha salida: " + fechaSalida);
         
         for (Long idPlan : tiposSeleccionados) {
+            // Buscar plan por id
             Optional<PlanMantenimiento> optionalPlan = planRepository.findById(idPlan);
             if (optionalPlan.isPresent()) {
                 PlanMantenimiento plan = optionalPlan.get();
 
+                // Crear relación
                 RelacionMantenimiento relacion = new RelacionMantenimiento();
                 relacion.setIdMaquinaria(idMaquinaria);
                 relacion.setIdTecnico(idTecnico);
@@ -43,6 +49,7 @@ public class RelacionServicio {
                 relacion.setFechaSalida(fechaSalida);
                 relacion.setEstado("PENDIENTE"); // Establecer estado inicial
 
+                // Guardar en BD
                 RelacionMantenimiento guardada = relacionRepository.save(relacion);
                 System.out.println("Relación guardada con ID: " + guardada.getId());
                 System.out.println("Estado: " + guardada.getEstado());
@@ -52,31 +59,39 @@ public class RelacionServicio {
         }
         System.out.println("=== FIN GUARDADO ===");
     }
+    // Obtener todas las relaciones
     public List<RelacionMantenimiento> obtenerTodos() {
         return relacionRepository.findAll();
     }
     
+    // Obtener última relación
     public RelacionMantenimiento obtenerUltimaMaquinaria() {
         return relacionRepository.findTopByOrderByIdDesc();
     }
     
+    // Generar historial de pagos
     public List<HistorialPagoDTO> obtenerHistorialPagos(List<Maquinaria> maquinarias, List<PlanMantenimiento> planes) {
         List<RelacionMantenimiento> relaciones = relacionRepository.findAll();
         List<HistorialPagoDTO> historial = new ArrayList<>();
 
+       // Iterar relaciones
        for (RelacionMantenimiento rel : relaciones) {
+            // Buscar maquinaria
             Maquinaria maq = maquinarias.stream()
-            		.filter(m -> Integer.valueOf(rel.getIdMaquinaria()).equals(m.getId()))
+                    .filter(m -> Integer.valueOf(rel.getIdMaquinaria()).equals(m.getId()))
                     .findFirst().orElse(null);
 
+            // Buscar plan
             PlanMantenimiento plan = planes.stream()
-            		.filter(p -> rel.getIdPlan() != null && Integer.valueOf(rel.getIdPlan()).equals(p.getId()))            		
+                    .filter(p -> rel.getIdPlan() != null && Integer.valueOf(rel.getIdPlan()).equals(p.getId()))                        
                     .findFirst().orElse(null);
 
             if (maq != null && plan != null) {
-            	double subtotal = plan.getPrecio();
+                // Calcular totales
+                double subtotal = plan.getPrecio();
                 double total = subtotal * 1.18;
 
+                // Crear DTO
                 HistorialPagoDTO dto = new HistorialPagoDTO(
                     maq.getId(),
                     maq.getNombre(),
@@ -85,7 +100,7 @@ public class RelacionServicio {
                     plan.getNombre(),
                     subtotal,
                     total
-                		);
+                        );
                 historial.add(dto);
             }
         }
