@@ -10,14 +10,18 @@ import com.example.Integrador.Repositorios.UsuarioRolesRepository;
 
 
 @Service
+// Servicio roles usuario
 public class UsuarioRolService {
     @Autowired
+    // Repositorio usuarios roles
     private UsuarioRolesRepository urRepository;
 
     public void crearUsuarioConRol(Integer a) {
-    	UsuariosRoles u = new UsuariosRoles();	
+    	// Crea usuario rol
+    	UsuariosRoles u = new UsuariosRoles();
+    	// Instancia UsuariosRoles
     	u.setIdUsuario(a);
-    	u.setIdRol(1);   	
+    	u.setIdRol(1);
     	urRepository.save(u);
     }
 }
