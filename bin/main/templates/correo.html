@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Plantilla correo -->
+<html lang="es">
   <head>
+    <!-- Metadatos correo -->
     <meta charset="UTF-8" />
+    <!-- Responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- Título correo -->
+    <title>Recuperar contraseña</title>
+    <!-- Estilos correo -->
     <link rel="stylesheet" href="estilo-corre.css" />
     <link rel="stylesheet" href="normalize.css" />
+    <!-- Iconos fontawesome -->
     <script
       src="https://kit.fontawesome.com/da157044bb.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
+    <!-- Contenedor principal -->
     <div class="hero">
+      <!-- Sección recuperar -->
       <div class="hero-correo">
+        <!-- Título y guía -->
         <div class="titulo">
           <p class="parra1">Recuperar Password.</p>
+          <!-- Nota informativa -->
           <p class="parra2">
-            Ten presente que tu correo debe haber sido registrado en neustra
+            Ten presente que tu correo debe haber sido registrado en nuestra
             base de datos.
           </p>
         </div>
+        <!-- Formulario envío correo -->
         <form th:action="@{/nueva-contraseña}" method="post">
+          <!-- Campo correo -->
           <div class="correo-dato">
             <label for="">Correo Electronico:<span th:if="${errorGmail}" th:text="${errorGmail}" style="color:red; margin-left: 5px"></span></label>
             
             <input type="text" name="email" id="" placeholder="ejemplo@gmail.com" />
+            <!-- Icono usuario -->
             <i class="fa-solid fa-user"></i>
           </div>
+          <!-- Botón enviar -->
           <div class="boton">
             <input type="submit" />
           </div>
         </form>
       </div>
     </div>
-  </body>
+  </body>
 </html>
